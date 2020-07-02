@@ -1,0 +1,197 @@
+:root {
+    --black: #111111;
+    --gray: #777777;
+    --dark-gray: #6e6e6e;
+    --font-bold: 900;
+    --gap: 1rem;
+    --icon-size: 24px;
+}
+
+html, body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    margin: var(--gap);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+#name > span {
+    display: inline-block;
+}
+
+#sns {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.sns:visited,
+.sns:hover,
+.sns:active {
+    color: var(--black) !important;
+}
+
+.sns > ion-icon {
+    font-size: var(--icon-size);
+    color: var(--black) !important;
+    margin: 0 .1rem;
+}
+
+section > h1 {
+    border-bottom: 1px var(--gray) solid;
+    padding-bottom: calc(var(--gap) * .5);
+    margin-bottom: 0;
+}
+
+.education {
+    display: grid;
+    grid-template-areas: "name   date"
+                         "degree degree";
+    margin-bottom: var(--gap);
+}
+
+@media (max-width: 500px) {
+    .education {
+        grid-template-areas: "name"
+                             "date"
+                             "degree";
+    }
+}
+
+.education > .degree {
+    grid-area: degree;
+    margin: 0;
+}
+
+.education > .name {
+    grid-area: name;
+    font-weight: var(--font-bold);
+}
+
+@media (max-width: 500px) {
+    .education > .name {
+        margin-bottom: 0;
+    }
+}
+
+.education > .date {
+    grid-area: date;
+    justify-self: right;
+}
+
+@media (max-width: 500px) {
+    .education > .date {
+        margin: .5rem 0;
+        justify-self: flex-start;
+        color: var(--dark-gray);
+    }
+}
+
+.experience {
+    display: grid;
+    grid-template-areas: "title   date"
+                         "details details";
+    margin-bottom: var(--gap);
+}
+
+@media (max-width: 500px) {
+    .experience {
+        grid-template-areas: "title"
+                             "date"
+                             "details";
+    }
+}
+
+.experience > .date {
+    grid-area: date;
+    justify-self: right;
+}
+
+@media (max-width: 500px) {
+    .experience > .date {
+        margin: .5rem 0;
+        justify-self: flex-start;
+        color: var(--dark-gray);
+    }
+}
+
+.experience > .title {
+    grid-area: title;
+    font-weight: var(--font-bold);
+}
+
+@media (max-width: 500px) {
+    .experience > .title {
+        margin-bottom: 0;
+    }
+}
+
+.experience > .details {
+    grid-area: details;
+    margin: 0;
+    padding-left: calc(var(--gap) * 1.5);
+}
+
+.project {
+    display: grid;
+    grid-template-areas: "title   type"
+                         "details details";
+    margin-bottom: var(--gap);
+}
+
+@media (max-width: 500px) {
+    .project {
+        grid-template-areas: "title"
+                             "type"
+                             "details";
+    }
+}
+
+.project > .type {
+    grid-area: type;
+    justify-self: right;
+}
+
+@media (max-width: 500px) {
+    .project > .type {
+        margin: .5rem 0;
+        justify-self: flex-start;
+        color: var(--dark-gray);
+    }
+}
+
+.project > .title {
+    font-weight: var(--font-bold);
+    grid-area: title;
+}
+
+@media (max-width: 500px) {
+    .project > .title {
+        margin-bottom: 0;
+    }
+}
+
+.project > .details {
+    grid-area: details;
+    margin: 0;
+    padding-left: calc(var(--gap) * 1.5);
+    word-break: break-all;
+}
+
+#skills > ul {
+    padding-left: calc(var(--gap) * 1.5);
+}
+
+#skills > h3 {
+    margin-bottom: 0;
+}
