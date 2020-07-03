@@ -3,7 +3,7 @@ import style from "./profile.module.css"
 export default function Profile() {
     const name = 'Pei-Ming Wu';
     const aka = '(aka mkfsn)'
-    const address = 'Taiwan. p408865(&#35;)gmail.com';
+    const address = 'Taiwan. p408865(#)gmail.com';
     const links = [
         {logo: 'home', href: 'https://mkfsn.github.io'},
         {logo: 'logo-github', href: 'https://github.com/mkfsn'},
