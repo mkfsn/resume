@@ -1,0 +1,44 @@
+.experience {
+    display: grid;
+    grid-template-areas: "title   date"
+                        "details details";
+    margin-bottom: var(--gap);
+}
+
+@media (max-width: 500px) {
+    .experience {
+        grid-template-areas: "title"
+                             "date"
+                             "details";
+    }
+}
+
+.experience > .date {
+    grid-area: date;
+    justify-self: right;
+}
+
+@media (max-width: 500px) {
+    .experience > .date {
+        margin: .5rem 0;
+        justify-self: flex-start;
+        color: var(--dark-gray);
+    }
+}
+
+.experience > .title {
+    grid-area: title;
+    font-weight: var(--font-bold);
+}
+
+@media (max-width: 500px) {
+    .experience > .title {
+        margin-bottom: 0;
+    }
+}
+
+.experience > .details {
+    grid-area: details;
+    margin: 0;
+    padding-left: calc(var(--gap) * 1.5);
+}

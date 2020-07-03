@@ -1,0 +1,28 @@
+:root {
+    --black: #111111;
+    --gray: #777777;
+    --dark-gray: #6e6e6e;
+    --font-bold: 900;
+    --gap: 1rem;
+    --icon-size: 24px;
+}
+
+html, body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    margin: var(--gap);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+}
+
+section > h1 {
+    border-bottom: 1px var(--gray) solid;
+    padding-bottom: calc(var(--gap) * .5);
+    margin-bottom: 0;
+}
