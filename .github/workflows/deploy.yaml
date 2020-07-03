@@ -27,6 +27,9 @@ jobs:
         run: yarn install --production=true --frozen-lockfile
 
       - name: Build
+        run: yarn build
+
+      - name: Export
         run: yarn export
 
       - name: Deploy
