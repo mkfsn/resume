@@ -2,7 +2,7 @@ import style from "./projects.module.css"
 
 function Project(project) {
     return (
-        <div className={style.project}>
+        <div className={style.project} key={project.title}>
             <p className={style.type}>{project.type}</p>
             <p className={style.title}>{project.title}</p>
             <ul className={style.details}>

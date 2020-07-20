@@ -20,7 +20,7 @@ export default function Profile() {
             <h4 className={style.address}>{address}</h4>
             <h4 className={style.sns}>
                 {links.map((link) => (
-                    <a className={style.link} target="_blank" href={link.href}>
+                    <a className={style.link} target="_blank" href={link.href} key={link.logo}>
                         <ion-icon name={link.logo} />
                     </a>
                 ))}

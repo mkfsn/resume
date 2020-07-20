@@ -26,13 +26,13 @@ export default function Skills() {
             <h3>Knowledge</h3>
             <ul>
                 {skills.knowledge.map((knowledge) => (
-                    <li>{knowledge}</li>
+                    <li key={knowledge}>{knowledge}</li>
                 ))}
             </ul>
             <h3>Languages</h3>
             <ul>
                 {skills.languages.map((language) => (
-                    <li>{language}</li>
+                    <li key={language}>{language}</li>
                 ))}
             </ul>
         </section>

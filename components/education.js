@@ -22,7 +22,7 @@ export default function Education() {
         <section id="education">
             <h1>Education</h1>
             {educations.map((education) => (
-                <div className={style.education}>
+                <div className={style.education} key={education.name}>
                     <p className={style.name}>{education.name}</p>
                     <p className={style.date}>{education.date}</p>
                     <p className={style.degree}>{education.degree}</p>

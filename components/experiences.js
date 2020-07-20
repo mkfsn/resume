@@ -44,12 +44,12 @@ export default function Experiences() {
         <section id="experience">
             <h1>Experience</h1>
             {experiences.map((experience) => (
-                <div className={style.experience}>
+                <div className={style.experience} key={experience.title}>
                     <p className={style.title}>{experience.title}</p>
                     <p className={style.date}>{experience.date}</p>
                     <ul className={style.details}>
                         {experience.details.map((item) => (
-                            <li>{item}</li>
+                            <li key={item}>{item}</li>
                         ))}
                     </ul>
                 </div>
