@@ -1,0 +1,173 @@
+.timeline {
+  $gap: 10px;
+  $timeline-width: 4px;
+  $outline-width: 70px;
+  $outline-gap: $gap;
+  $green: rgb(95, 153, 80);
+  $blue: rgb(83, 84, 234);
+  $yellow: rgb(229, 164, 112);
+  $white: white;
+  $black: rgb(0, 0, 0);
+
+  position: relative;
+  max-width: 1200px;
+  margin-top: 30px;
+  margin-bottom: 19.92px;
+
+  @media print {
+    display: none;
+  }
+
+  &.green::after {
+    border-right-color: $green;
+  }
+  &.blue::after {
+    border-right-color: $blue;
+  }
+  &.yellow::after {
+    border-right-color: $yellow;
+  }
+
+  &::after {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    padding-left: $outline-gap + $outline-width;
+    border-right-width: $timeline-width;
+    border-right-style: dotted;
+  }
+
+  .timeline-container {
+    display: flex;
+    position: relative;;
+    padding-left: $outline-width + $outline-gap;
+    padding-top: 50px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    .timeline-outline {
+      position: inherit;
+      display: flex;
+      flex-direction: column;
+      border-right-width: $timeline-width;
+      border-right-style: solid;
+      margin-left: -$outline-gap - $outline-width;
+      padding-right: $outline-gap * 2;
+      text-align: right;
+
+      & > .end {
+        width: $outline-width - $outline-gap;
+        margin-top: -$gap;
+      }
+
+      & > .begin {
+        margin-top: auto;
+        width: $outline-width - $outline-gap;
+        margin-bottom: -$gap;
+      }
+
+      @mixin time-point {
+        content: '';
+        position: absolute;
+        width: $gap;
+        height: $gap;
+        right: -$gap - 1px;
+        background-color: $white;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      &.blue::before {
+        border-color: $blue;
+      }
+      &.green::before {
+        border-color: $green;
+      }
+      &.yellow::before {
+        border-color: $yellow;
+      }
+
+      &::before {
+        @include time-point;
+        top: -8px;
+      }
+
+      &.blue::after {
+        border-color: $blue;
+      }
+      &.green::after {
+        border-color: $green;
+      }
+      &.yellow::after {
+        border-color: $yellow;
+      }
+
+      &::after {
+        @include time-point;
+        bottom: -8px;
+      }
+
+      &.blue {
+        border-right-color: $blue;
+      }
+      &.green {
+        border-right-color: $green;
+      }
+      &.yellow {
+        border-right-color: $yellow;
+      }
+    }
+
+    .timeline-content {
+      padding: $gap 0 $gap 2*$gap;
+      box-shadow: 0 0 4px rgba($black, 0.12), 0 2px 2px rgba($black, 0.08);
+      position: relative;
+      border-radius: 6px;
+      margin-left: $gap * 3;
+      width: 100vw;
+      max-width: calc(100vw - 170px);
+
+      .title > h3 {
+        margin-top: $gap;
+        margin-bottom: $gap;
+      }
+
+      .detail {
+        margin-bottom: $gap;
+      }
+
+      &.green {
+        background-color: rgba($green, 0.15);
+      }
+      &.blue {
+        background-color: rgba($blue, 0.15);
+      }
+      &.yellow {
+        background-color: rgba($yellow, 0.15);
+      }
+    }
+
+    &.overlap {
+      margin-top: $gap;
+      margin-bottom: $gap * 2;
+
+      .timeline-outline {
+        left: -134px;
+        z-index: 999;
+      }
+
+      .timeline-content {
+        margin-right: $gap;
+        width: 100%;
+        margin-left: -9 * $gap;
+        padding-right: 5 * $gap;
+      }
+    }
+  }
+}
