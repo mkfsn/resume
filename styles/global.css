@@ -26,3 +26,8 @@ section > h1 {
     padding-bottom: calc(var(--gap) * .5);
     margin-bottom: 0;
 }
+
+@page{
+    size: A4 portrait;
+    margin: 0.5cm;
+}
