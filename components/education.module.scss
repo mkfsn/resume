@@ -1,7 +1,7 @@
 .education {
     $width-breakpoint: 500px;
 
-    display: grid;
+    display: none;
     grid-template-areas: "name   date"
                          "degree degree";
     margin-bottom: var(--gap);
@@ -10,6 +10,9 @@
         grid-template-areas: "name"
                              "date"
                              "degree";
+    }
+    @media print {
+        display: grid;
     }
 
     & > .degree {
@@ -34,6 +37,128 @@
             margin: .5rem 0;
             justify-self: flex-start;
             color: var(--dark-gray);
+        }
+    }
+}
+
+.timeline {
+    $gap: 10px;
+    $timeline-color: rgb(229, 164, 112);
+    $overlap-color: rgb(83, 84, 234);
+    $timeline-width: 4px;
+    $outline-width: 70px;
+    $outline-gap: $gap;
+    $content-background-color: rgba(229, 164, 112, 0.15);
+    $overlap-content-background-color: rgba(83, 84, 234, 0.15);
+
+    position: relative;
+    max-width: 1200px;
+    margin-top: 30px;
+    margin-bottom: 19.92px;
+
+    @media print {
+        display: none;
+    }
+
+    &::after {
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        padding-left: $outline-gap + $outline-width;
+        border-right: $timeline-width dotted $timeline-color;
+    }
+
+    .timeline-container {
+        display: flex;
+        position: relative;;
+        padding-left: $outline-width + $outline-gap;
+        padding-top: 50px;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        .timeline-outline {
+            position: inherit;
+            display: flex;
+            flex-direction: column;
+            border-right: $timeline-width solid $timeline-color;
+            margin-left: -$outline-gap - $outline-width;
+            padding-right: $outline-gap * 2;
+            text-align: right;
+
+            & > .end {
+                width: $outline-width - $outline-gap;
+                margin-top: -$gap;
+            }
+
+            & > .begin {
+                margin-top: auto;
+                width: $outline-width - $outline-gap;
+                margin-bottom: -$gap;
+            }
+
+            @mixin time-point {
+                content: '';
+                position: absolute;
+                width: $gap;
+                height: $gap;
+                right: -$gap - 1px;
+                background-color: white;
+                border: 4px solid $timeline-color;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            &::before {
+                @include time-point;
+                top: -8px;
+            }
+
+            &::after {
+                @include time-point;
+                bottom: -8px;
+            }
+        }
+
+        .timeline-content {
+            padding: $gap 0 $gap 2*$gap;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+            background-color: $content-background-color;
+            position: relative;
+            border-radius: 6px;
+            margin-left: $gap * 3;
+            width: 100vw;
+
+            .title > h3 {
+                margin-top: $gap;
+                margin-bottom: $gap;
+            }
+
+            .detail {
+                margin-bottom: $gap;
+            }
+        }
+
+        &.overlap {
+            top: -260px;
+            margin-bottom: -150px;
+
+            .timeline-outline {
+                border-right-color: $overlap-color;
+                z-index: 999;
+                &::before, &::after {
+                    border-color: $overlap-color;
+                }
+            }
+
+            .timeline-content {
+                margin-left: 4 * $gap;
+                margin-right: $gap;
+                background-color: $overlap-content-background-color;
+            }
         }
     }
 }
