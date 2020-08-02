@@ -12,19 +12,24 @@ export default function Profile() {
     ];
     return (
         <header id="me">
-            <h1 className={style.name}>
-                <span>{name}</span>
-                &nbsp;
-                <span>{aka}</span>
-            </h1>
-            <h4 className={style.address}>{address}</h4>
-            <h4 className={style.sns}>
-                {links.map((link) => (
-                    <a className={style.link} target="_blank" href={link.href} key={link.logo}>
-                        <ion-icon name={link.logo} />
-                    </a>
-                ))}
-            </h4>
+            <div className={style.profile}>
+                <h1 className={style.name}>
+                    <span>{name}</span>
+                    &nbsp;
+                    <span>{aka}</span>
+                </h1>
+                <h4 className={style.address}>{address}</h4>
+                <h4 className={style.sns}>
+                    {links.map((link) => (
+                        <a className={style.link} target="_blank" href={link.href} key={link.logo}>
+                            <ion-icon name={link.logo} />
+                        </a>
+                    ))}
+                </h4>
+            </div>
+            <div className={style.avatar}>
+               <img src="/avatar.png" alt="avatar"/>
+            </div>
         </header>
     )
 }
