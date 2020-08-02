@@ -3,8 +3,12 @@ import style from "./experiences.module.scss"
 export default function Experiences() {
     const experiences = [
         {
+            // https://glasnostic.com/favicon.ico
             title: 'Glasnostic, Lead Developer',
-            date: 'Nov\'18 - Current',
+            date: {
+                from: 'Nov\'18',
+                to: 'Current',
+            },
             details: [
                 'Responsible for the cloud project and production environment',
                 'Plan and create integration test cases for microservices',
@@ -12,8 +16,12 @@ export default function Experiences() {
             ],
         },
         {
+            // https://glasnostic.com/favicon.ico
             title: 'Glasnostic, Software Engineer',
-            date: 'Feb\'17 - Nov\'18',
+            date: {
+                from: 'Feb\'17',
+                to: 'Nov\'18',
+            },
             details: [
                 'Developed microservices using Golang',
                 'Deployed microservices using Docker / Kubernetes',
@@ -22,8 +30,12 @@ export default function Experiences() {
             ],
         },
         {
+            // https://www.ee.ncku.edu.tw/image/nckuee.ico
             title: 'NCKU EE, Network and System Administrator',
-            date: 'Sep\'13 - Jun,15',
+            date: {
+                from: 'Sep\'13',
+                to: 'Jun\'15',
+            },
             details: [
                 'Maintained layer 2/3 switches and servers',
                 'Developed web-based network management system using PHP and Apache',
@@ -31,7 +43,10 @@ export default function Experiences() {
         },
         {
             title: 'NSYSU-CDPA, Network and System Administrator',
-            date: 'Sep\'10 - Jun,13',
+            date: {
+                from: 'Sep\'10',
+                to: 'Jun\'13',
+            },
             details: [
                 'Reconfigured, upgrade, and replaced layer 2/3 switches',
                 'Replaced broken RJ45 sockets',
@@ -43,10 +58,34 @@ export default function Experiences() {
     return (
         <section id="experience">
             <h1>Experience</h1>
+
+            <div className={style.timeline}>
+                {experiences.map((experience) => (
+                    <div className={style['timeline-container']}>
+                        <div className={style['timeline-outline']}>
+                            <div className={style.end}>{experience.date.to}</div>
+                            <div className={style.begin}>{experience.date.from}</div>
+                        </div>
+                        <div className={style['timeline-content']}>
+                            <div className={style.title}>
+                                <h3>{experience.title}</h3>
+                            </div>
+                            <div className={style.detail}>
+                                <ul>
+                                    {experience.details.map((item) => (
+                                        <li key={item}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
             {experiences.map((experience) => (
                 <div className={style.experience} key={experience.title}>
                     <p className={style.title}>{experience.title}</p>
-                    <p className={style.date}>{experience.date}</p>
+                    <p className={style.date}>{experience.date.from} - {experience.date.to}</p>
                     <ul className={style.details}>
                         {experience.details.map((item) => (
                             <li key={item}>{item}</li>

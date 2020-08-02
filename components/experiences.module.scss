@@ -1,7 +1,7 @@
 .experience {
     $width-breakpoint: 500px;
 
-    display: grid;
+    display: none;
     grid-template-areas: "title   date"
                         "details details";
     margin-bottom: var(--gap);
@@ -10,6 +10,9 @@
         grid-template-areas: "title"
                              "date"
                              "details";
+    }
+    @media print {
+        display: grid;
     }
 
     & > .date {
@@ -36,5 +39,104 @@
         grid-area: details;
         margin: 0;
         padding-left: calc(var(--gap) * 1.5);
+    }
+}
+
+.timeline {
+    $gap: 10px;
+    $outline-width: 70px;
+    $outline-right-gap: $gap;
+    $line-width: 4px;
+    $timeline-color: #e5a470;
+    $content-background-color: #fafafa;
+
+    position: relative;
+    max-width: 1200px;
+    margin-top: 30px;
+    margin-bottom: 19.92px;
+
+    @media print {
+        display: none;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding-left: $outline-right-gap + $outline-width;
+        border-right: $line-width dotted $timeline-color;
+    }
+
+    .timeline-container {
+        padding-top: 50px;
+        padding-left: $outline-right-gap + $outline-width;
+        position: relative;
+        display: flex;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        & > .timeline-outline {
+            position: inherit;
+            display: flex;
+            flex-direction: column;
+            border-right: $line-width solid $timeline-color;
+            margin-left: -$outline-right-gap - $outline-width;
+            padding-right: $outline-right-gap * 2;
+            text-align: right;
+
+            @mixin time-point {
+                content: '';
+                position: absolute;
+                width: $gap;
+                height: $gap;
+                right: -$gap - 1px;
+                background-color: white;
+                border: 4px solid $timeline-color;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            & > .begin {
+                margin-top: auto;
+                width: $outline-width - $outline-right-gap;
+                margin-bottom: -$gap;
+            }
+
+            & > .end {
+                margin-top: -$gap;
+            }
+
+            &::before {
+                @include time-point;
+                top: -8px;
+            }
+            &::after {
+                @include time-point;
+                bottom: -8px;
+            }
+        }
+
+        .timeline-content {
+            padding: $gap 0 $gap 2*$gap;
+            background-color: $content-background-color;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+            position: relative;
+            border-radius: 6px;
+            margin-left: $gap * 3;
+            width: 100vw;
+
+            & > .title > h3 {
+                margin-top: $gap;
+                margin-bottom: $gap;
+            }
+
+            & > .detail > ul {
+                margin-bottom: $gap;
+            }
+        }
     }
 }
