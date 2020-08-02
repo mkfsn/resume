@@ -1,4 +1,4 @@
-import style from "./projects.module.css"
+import style from "./projects.module.scss"
 
 function Project(project) {
     return (

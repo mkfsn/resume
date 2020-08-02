@@ -1,0 +1,27 @@
+.name > span {
+    display: inline-block;
+}
+
+.sns {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.link {
+    &:visited,
+    &:hover,
+    &:active {
+        color: var(--black) !important;
+    }
+
+    & > ion-icon {
+        font-size: var(--icon-size);
+        color: var(--black) !important;
+        margin: 0 .1rem;
+    }
+}
+
+.address {
+    margin: 0;
+}

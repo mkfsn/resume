@@ -1,4 +1,4 @@
-import style from "./experiences.module.css"
+import style from "./experiences.module.scss"
 
 export default function Experiences() {
     const experiences = [

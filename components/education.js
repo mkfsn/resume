@@ -1,4 +1,4 @@
-import style from "./education.module.css"
+import style from "./education.module.scss"
 
 export default function Education() {
     const educations = [

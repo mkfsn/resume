@@ -1,4 +1,4 @@
-import style from "./profile.module.css"
+import style from "./profile.module.scss"
 
 export default function Profile() {
     const name = 'Pei-Ming Wu';
