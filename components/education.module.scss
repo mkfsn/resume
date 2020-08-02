@@ -131,6 +131,7 @@
             border-radius: 6px;
             margin-left: $gap * 3;
             width: 100vw;
+            max-width: calc(100vw - 170px);
 
             .title > h3 {
                 margin-top: $gap;
@@ -143,11 +144,12 @@
         }
 
         &.overlap {
-            top: -260px;
-            margin-bottom: -150px;
+            margin-top: $gap;
+            margin-bottom: $gap * 2;
 
             .timeline-outline {
                 border-right-color: $overlap-color;
+                left: -134px;
                 z-index: 999;
                 &::before, &::after {
                     border-color: $overlap-color;
@@ -155,9 +157,11 @@
             }
 
             .timeline-content {
-                margin-left: 4 * $gap;
                 margin-right: $gap;
                 background-color: $overlap-content-background-color;
+                width: 100%;
+                margin-left: -9 * $gap;
+                padding-right: 5 * $gap;
             }
         }
     }

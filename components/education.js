@@ -31,7 +31,24 @@ export default function Education() {
                         <div className={style.end}>Sep'16</div>
                         <div className={style.begin}>Sep'13</div>
                     </div>
-                    <div className={style['timeline-content']} style={{paddingTop: '120px'}}>
+                    <div className={style['timeline-content']}>
+                        <div className={style['timeline-container'] + ' ' + style['overlap']}>
+                            <div className={style['timeline-outline']}>
+                                <div className={style.end}>Aug'16</div>
+                                <div className={style.begin}>Sep'15</div>
+                            </div>
+                            <div className={style['timeline-content']}>
+                                <div className={style.title}>
+                                    <h3>
+                                        Graduate School of Information Science and Technology,
+                                        Osaka University, Japan
+                                    </h3>
+                                </div>
+                                <div className={style.detail}>
+                                    Bachelor of Engineering
+                                </div>
+                            </div>
+                        </div>
                         <div className={style.title}>
                             <h3>
                                 Institute of Computer and Communication Engineering,
@@ -44,23 +61,7 @@ export default function Education() {
                         </div>
                     </div>
                 </div>
-                <div className={style['timeline-container'] + ' ' + style['overlap']}>
-                    <div className={style['timeline-outline']}>
-                        <div className={style.end}>Aug'16</div>
-                        <div className={style.begin}>Sep'15</div>
-                    </div>
-                    <div className={style['timeline-content']}>
-                        <div className={style.title}>
-                            <h3>
-                                Graduate School of Information Science and Technology,
-                                Osaka University, Japan
-                            </h3>
-                        </div>
-                        <div className={style.detail}>
-                            Bachelor of Engineering
-                        </div>
-                    </div>
-                </div>
+
                 <div className={style['timeline-container']}>
                     <div className={style['timeline-outline']}>
                         <div className={style.end}>Jun'13</div>
