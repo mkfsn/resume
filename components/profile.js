@@ -28,7 +28,7 @@ export default function Profile() {
                 </h4>
             </div>
             <div className={style.avatar}>
-               <img src="/avatar.png" alt="avatar"/>
+               <img src="/resume/avatar.png" alt="avatar"/>
             </div>
         </header>
     )
