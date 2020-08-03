@@ -1,18 +1,18 @@
-.timeline {
-  $gap: 10px;
-  $timeline-width: 4px;
-  $outline-width: 70px;
-  $outline-gap: $gap;
-  $green: rgb(95, 153, 80);
-  $blue: rgb(83, 84, 234);
-  $yellow: rgb(229, 164, 112);
-  $white: white;
-  $black: rgb(0, 0, 0);
+$gap: 10px;
+$timeline-width: 4px;
+$outline-width: 70px;
+$outline-gap: $gap;
+$green: rgb(95, 153, 80);
+$blue: rgb(83, 84, 234);
+$yellow: rgb(229, 164, 112);
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
 
+.timeline {
   position: relative;
-  max-width: 1200px;
-  margin-top: 30px;
+  margin-top: $gap * 3;
   margin-bottom: 19.92px;
+  max-width: 1200px;
 
   @media print {
     display: none;
@@ -41,9 +41,9 @@
 
   .timeline-container {
     display: flex;
-    position: relative;;
+    position: relative;
     padding-left: $outline-width + $outline-gap;
-    padding-top: 50px;
+    padding-top: $gap * 5;
 
     &:first-child {
       padding-top: 0;

@@ -1,40 +1,46 @@
 import style from "./timeline.module.scss";
 import dateFormatter from "./formatter";
 
+// -1 denotes undefined behavior
+function checkOverlap(t1, t2) {
+    if (t1.from >= t2.from && t1.to <= t2.to) {
+        //   from ---- t1 ---- to
+        // from ------ t2 ------- to
+        return -1;
+    } else if (t1.from <= t2.from && t1.to >= t2.to) {
+        // from ------ t1 ---------- to
+        //   from ---- t2 ----- to
+        return 2;
+    }
+    // TODO(mkfsn): implement other cases
+    return -1
+}
+
 function parsePeriods(periods) {
     const temp = [];
-    periods.forEach((period, idx) => {
-
+    periods.forEach((period) => {
         period.beforeChildren = [];
         period.afterChildren = [];
 
         let found = false;
-        temp.forEach((v, i) => {
-            if (v.date.from >= period.date.from && v.date.to <= period.date.to) {
-                // if v is in period:
-                // 1. remove v from temp
-                // 2. add v to period's child(beforeChildren or afterChildren)
-                // TODO(mkfsn):
-
-            } else if (period.date.from >= v.date.from && period.date.to <= v.date.to) {
-                // if period is in v
-                // 1. add period to v's child(beforeChildren or afterChildren)
-                const t1 = period.date.from - v.date.from,
-                      t2 = v.date.to - period.date.to;
-                if (t1 > t2) {
-                    v.afterChildren.push(period);
-                } else {
-                    v.beforeChildren.push(period);
-                }
-                found = true;
+        temp.forEach((v) => {
+            switch (checkOverlap(v.date, period.date)) {
+                case -1: // ignore
+                    break;
+                case 2:
+                    if (period.date.from - v.date.from > v.date.to - period.date.to) {
+                        v.afterChildren.push(period);
+                    } else {
+                        v.beforeChildren.push(period);
+                    }
+                    found = true;
+                    break;
             }
         });
-
         if (!found) {
             temp.push(period);
         }
     })
-
     return temp;
 }
 
@@ -48,11 +54,7 @@ function timelineOutline(date, color) {
 }
 
 function timelineContentTitle(title) {
-    return (
-        <div className={style.title}>
-            <h3>{title}</h3>
-        </div>
-    )
+    return <div className={style.title}><h3>{title}</h3></div>
 }
 
 function timelineContentDetails(details) {
@@ -66,42 +68,31 @@ function timelineContentDetails(details) {
                 </ul>
             </div>
         )
-    } else if (typeof details === 'string') {
-        return (
-            <div className={style.detail}>
-                {details}
-            </div>
-        )
     }
-    return (
-        <div className={style.detail}>
-            {details.toString()}
-        </div>
-    )
+    return <div className={style.detail}>{details.toString()}</div>
 }
 
 function Period(period) {
-   return (
-       <div className={style['timeline-container']}>
-           {timelineOutline(period.date, period.color)}
-           <div className={style['timeline-content'] + ' ' + style[period.color]}>
-               {
-                   // TODO(mkfsn)
-                   (period.afterChildren[0] !== undefined)  && (
-                       <div className={style['timeline-container'] + ' ' + style['overlap']}>
-                           {timelineOutline(period.afterChildren[0].date, period.afterChildren[0].color)}
-                           <div className={style['timeline-content'] + ' ' + style[period.afterChildren[0].color] }>
-                               {timelineContentTitle(period.afterChildren[0].title)}
-                               {timelineContentDetails(period.afterChildren[0].details)}
-                           </div>
-                       </div>
-                   )
-               }
-               {timelineContentTitle(period.title)}
-               {timelineContentDetails(period.details)}
-           </div>
-       </div>
-   )
+    const afterBlock = period.afterChildren[0] !== undefined && (
+        <div className={style['timeline-container'] + ' ' + style['overlap']}>
+            {timelineOutline(period.afterChildren[0].date, period.afterChildren[0].color)}
+            <div className={style['timeline-content'] + ' ' + style[period.afterChildren[0].color] }>
+                {timelineContentTitle(period.afterChildren[0].title)}
+                {timelineContentDetails(period.afterChildren[0].details)}
+            </div>
+        </div>
+    )
+
+    return (
+        <div className={style['timeline-container']}>
+            {timelineOutline(period.date, period.color)}
+            <div className={style['timeline-content'] + ' ' + style[period.color]}>
+                {afterBlock}
+                {timelineContentTitle(period.title)}
+                {timelineContentDetails(period.details)}
+            </div>
+        </div>
+    )
 }
 
 export default function Timeline(props) {
