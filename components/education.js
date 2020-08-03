@@ -43,7 +43,7 @@ export default function Education() {
             <h1>Education</h1>
             <Timeline periods={educations} color="yellow"/>
             {educations.map((education) => (
-                <div className={style.education} key={education.name}>
+                <div className={style.education} key={education.title}>
                     <p className={style.name}>{education.title}</p>
                     <p className={style.date}>{dateFormatter(education.date.from)} - {dateFormatter(education.date.to)}</p>
                     <p className={style.degree}>{education.details}</p>

@@ -3,7 +3,7 @@ import React from "react";
 
 function SkillBar(skillBar) {
     return (
-        <div className={style['skill-bar']}>
+        <div className={style['skill-bar']} key={skillBar.title}>
             <div className={style.wrapper}>
                 <span className={style.filled} style={{backgroundColor: skillBar.color, width: skillBar.percentage}} />
             </div>
@@ -15,9 +15,9 @@ function SkillBar(skillBar) {
 
 function SkillGroup(skillGroup) {
     return (
-        <div className={style['skill-group']}>
+        <div className={style['skill-group']} key={skillGroup.title}>
             <header className={style.header}>{skillGroup.title}</header>
-            <div class={style.body}>
+            <div className={style.body}>
                 {
                     skillGroup.skills.map((skill) => {
                         if (skill.color === undefined) {
@@ -41,10 +41,10 @@ function SkillSet(skillGroup) {
     });
     const skillList = Object.keys(skillSet).map((key, index) => skillSet[key].join(" / "));
     return (
-        <div className={style['skill-set']}>
+        <div className={style['skill-set']} key={skillGroup.title}>
             <h3>{skillGroup.title}</h3>
             <ul>
-                {skillList.map((skills) => <li>{skills}</li>)}
+                {skillList.map((skills) => <li key={skills}>{skills}</li>)}
             </ul>
         </div>
     )

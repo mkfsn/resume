@@ -84,7 +84,7 @@ function Period(period) {
     )
 
     return (
-        <div className={style['timeline-container']}>
+        <div className={style['timeline-container']} key={period.title}>
             {timelineOutline(period.date, period.color)}
             <div className={style['timeline-content'] + ' ' + style[period.color]}>
                 {afterBlock}
