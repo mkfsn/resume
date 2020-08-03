@@ -1,13 +1,19 @@
 import style from "./projects.module.scss"
 
-function Project(project) {
+function Project(project, theme) {
     return (
-        <div className={style.project} key={project.title}>
-            <p className={style.type}>{project.type}</p>
-            <p className={style.title}>{project.title}</p>
-            <ul className={style.details}>
-                <li>{project.details}</li>
-            </ul>
+        <div className={style.project + ' ' + style[theme]} key={project.title}>
+            <div className={style.type}>
+                <p>{project.type}</p>
+            </div>
+            <div className={style.title}>
+                <h3>{project.title}</h3>
+            </div>
+            <div className={style.details}>
+                <ul>
+                    <li>{project.details}</li>
+                </ul>
+            </div>
         </div>
     )
 }
@@ -23,7 +29,8 @@ export default function Projects() {
     return (
         <section id="projects">
             <h1>Projects</h1>
-            {projects.map((project) => Project(project))}
+            {projects.map((project) => Project(project, 'chromatic'))}
+            {projects.map((project) => Project(project, 'monochromatic'))}
         </section>
     )
 }
