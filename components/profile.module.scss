@@ -16,6 +16,8 @@
         border-radius: 50%;
         border: 2px solid #aaa;
         box-shadow: 0 0 18px -8px;
+        // Prevent displaying black background on print when using box-shadow.
+        -webkit-print-color-adjust: exact;
     }
 
     @media print {
