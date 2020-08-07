@@ -1,4 +1,23 @@
 .profile {
+    background-color: #ebebeb;
+    height: 60vh;
+    margin: -1rem -1rem 0 -1rem;
+    display: grid;
+    padding: 1rem 1rem 1rem calc(130px - 1vw);
+    align-content: center;
+
+    @media print {
+        background-color: white;
+        border-width: 0;
+        padding: 0;
+        margin: initial;
+        height: auto;
+    }
+
+    & > .container {
+        max-width: 1200px;
+    }
+
     .name {
         & > span {
             display: inline-block;

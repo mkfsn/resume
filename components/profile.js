@@ -19,13 +19,16 @@ export default function Profile() {
             home: 'https://mkfsn.github.io',
             github: 'https://github.com/mkfsn',
             twitter: 'https://twitter.com/mkfsn',
-            linkedin: 'https://linedin.com',
+            linkedin: 'https://linkedin.com/in/mkfsn',
         },
-        summary: 'Quick-learning software engineer with experience in computer science, programming and networking for various projects.',
+        summary: `
+            Quick-learning software engineer with experience in computer science,
+            programming and networking for various projects.
+        `,
     };
     return (
-        <header id="me">
-            <div className={style.profile}>
+        <header className={style.profile}>
+            <div className={style.container}>
                 <h1 className={style.name}>
                     <span>{me.name}</span>
                     &nbsp;
@@ -33,7 +36,12 @@ export default function Profile() {
                         <span className={style.aka}>(aka {me.nickname})</span>
                     )}
                 </h1>
-                <h4 className={style.address}>{me.location}. {me.email}</h4>
+                <h4 className={style.address}>
+                    <span>
+                        {me.location}. &nbsp;
+                    </span>
+                    <span>{me.email}</span>
+                </h4>
                 <h4 className={style.sns}>
                     <IconLink link={me.sns.home} name="home" color="rgb(78,165,133)"/>
                     <IconLink link={me.sns.github} name="logo-github" color="rgb(33,37,40)"/>
@@ -43,11 +51,9 @@ export default function Profile() {
                 <div className={style.avatar}>
                     <img src={me.avatar} alt="avatar"/>
                 </div>
-            </div>
-            <section>
-                <h1>Summary</h1>
+                <hr/>
                 <p>{me.summary}</p>
-            </section>
+            </div>
         </header>
     )
 }
