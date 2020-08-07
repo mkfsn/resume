@@ -64,6 +64,19 @@ $black: rgb(0, 0, 0);
         margin-top: -$gap;
       }
 
+      & > .icon {
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+
+        & > img {
+          $size: 30px;
+          height: $size;
+          width: $size;
+        }
+      }
+
       & > .begin {
         margin-top: auto;
         width: $outline-width - $outline-gap;

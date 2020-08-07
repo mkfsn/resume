@@ -5,12 +5,12 @@ import dateFormatter from "./formatter";
 export default function Experiences() {
     const experiences = [
         {
-            // https://glasnostic.com/favicon.ico
             title: 'Glasnostic, Lead Developer',
             date: {
                 from: new Date(2018, 11-1, 1),
                 to: new Date(),
             },
+            icon: 'https://glasnostic.com/favicon.ico',
             details: [
                 'Responsible for the cloud project and production environment',
                 'Plan and create integration test cases for microservices',
@@ -19,12 +19,12 @@ export default function Experiences() {
             color: 'green',
         },
         {
-            // https://glasnostic.com/favicon.ico
             title: 'Glasnostic, Software Engineer',
             date: {
                 from: new Date(2017, 2-1, 1),
                 to: new Date(2018, 11-1, 1),
             },
+            icon: 'https://glasnostic.com/favicon.ico',
             details: [
                 'Developed microservices using Golang',
                 'Deployed microservices using Docker / Kubernetes',
@@ -34,12 +34,12 @@ export default function Experiences() {
             color: 'green',
         },
         {
-            // https://www.ee.ncku.edu.tw/image/nckuee.ico
             title: 'NCKU EE, Network and System Administrator',
             date: {
                 from: new Date(2013, 9-1, 1),
                 to: new Date(2015, 6-1, 1),
             },
+            icon: 'https://www.ee.ncku.edu.tw/image/nckuee.ico',
             details: [
                 'Maintained layer 2/3 switches and servers',
                 'Developed web-based network management system using PHP and Apache',

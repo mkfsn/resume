@@ -44,10 +44,15 @@ function parsePeriods(periods) {
     return temp;
 }
 
-function timelineOutline(date, color) {
+function timelineOutline(date, color, icon) {
     return (
         <div className={style['timeline-outline'] + ' ' + style[color]}>
             <div className={style.end}>{dateFormatter(date.to)}</div>
+            {icon !== undefined && (
+                <div className={style.icon}>
+                    <img alt="icon" src={icon} />
+                </div>
+            )}
             <div className={style.begin}>{dateFormatter(date.from)}</div>
         </div>
     )
@@ -75,7 +80,7 @@ function timelineContentDetails(details) {
 function Period(period) {
     const afterBlock = period.afterChildren[0] !== undefined && (
         <div className={style['timeline-container'] + ' ' + style['overlap']}>
-            {timelineOutline(period.afterChildren[0].date, period.afterChildren[0].color)}
+            {timelineOutline(period.afterChildren[0].date, period.afterChildren[0].color, period.afterChildren[0].icon)}
             <div className={style['timeline-content'] + ' ' + style[period.afterChildren[0].color] }>
                 {timelineContentTitle(period.afterChildren[0].title)}
                 {timelineContentDetails(period.afterChildren[0].details)}
@@ -85,7 +90,7 @@ function Period(period) {
 
     return (
         <div className={style['timeline-container']} key={period.title}>
-            {timelineOutline(period.date, period.color)}
+            {timelineOutline(period.date, period.color, period.icon)}
             <div className={style['timeline-content'] + ' ' + style[period.color]}>
                 {afterBlock}
                 {timelineContentTitle(period.title)}

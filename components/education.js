@@ -4,10 +4,9 @@ import dateFormatter from "./formatter";
 
 export default function Education() {
     const educations = [
-        // https://web.ncku.edu.tw/var/file/0/1000/msys_1000_556236_23708.ico
         {
             title: 'Institute of Computer and Communication Engineering, Department of Engineering, National Cheng Kung University, Taiwan.',
-            // date: 'Sep\'13 - Sep\'16',
+            // icon: 'https://web.ncku.edu.tw/var/file/0/1000/msys_1000_556236_23708.ico',
             date: {
                 from: new Date(2013, 9-1, 1),
                 to: new Date(2016,9-1,1),
@@ -15,10 +14,9 @@ export default function Education() {
             details: 'Master of Computer and Communication Engineering',
             color: 'yellow',
         },
-        // https://www.osaka-u.ac.jp/favicon.ico
         {
             title: 'Graduate School of Information Science and Technology, Osaka University, Japan.',
-            // date: 'Sep\'15 - Aug\'16',
+            icon: 'https://www.osaka-u.ac.jp/favicon.ico',
             date: {
                 from: new Date(2015, 9-1, 1),
                 to: new Date(2016,8-1,1),
@@ -26,10 +24,9 @@ export default function Education() {
             details: 'Exchange Student',
             color: 'blue',
         },
-        // https://www.nsysu.edu.tw//var/file/0/1000/msys_1000_5687921_59580.ico
         {
             title: 'Department of Computer Science Engineering, National Sun Yat-Sen University, Taiwan.',
-            // date: 'Sep\'09 - Jun\'13',
+            icon: 'https://www.nsysu.edu.tw//var/file/0/1000/msys_1000_5687921_59580.ico',
             date: {
                 from: new Date(2009, 9-1, 1),
                 to: new Date(2013,6-1,1),
