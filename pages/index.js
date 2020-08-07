@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Profile from '../components/profile'
-import Summary from '../components/summary'
 import Education from "../components/education";
 import Experiences from "../components/experiences";
 import Projects from "../components/projects";
@@ -18,7 +17,6 @@ export default function Home() {
             </Head>
             <main>
                 <Profile/>
-                <Summary/>
                 <Education/>
                 <Experiences/>
                 <Projects/>

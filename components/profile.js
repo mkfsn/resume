@@ -1,35 +1,53 @@
 import style from "./profile.module.scss"
 
+function IconLink(prop) {
+    return (
+        <a className={style.link} target="_blank" href={prop.link} key={prop.link}>
+            <ion-icon name={prop.name} style={{color: prop.color}}/>
+        </a>
+    )
+}
+
 export default function Profile() {
-    const name = 'Pei-Ming Wu';
-    const aka = '(aka mkfsn)'
-    const address = 'Taiwan. p408865(#)gmail.com';
-    const links = [
-        {color: 'rgb(78,165,133)', logo: 'home', href: 'https://mkfsn.github.io'},
-        {color: 'rgb(33,37,40)', logo: 'logo-github', href: 'https://github.com/mkfsn'},
-        {color: 'rgb(43,152,236)', logo: 'logo-twitter', href: 'https://twitter.com/mkfsn'},
-        {color: 'rgb(23,104,166)', logo: 'logo-linkedin', href: 'https://linkedin.com/in/mkfsn'},
-    ];
+    const me = {
+        name: 'Pei-Ming Wu',
+        nickname: 'mkfsn',
+        location: 'Taiwan',
+        email: 'p408865(#)gmail.com',
+        avatar: '/resume/avatar.png',
+        sns: {
+            home: 'https://mkfsn.github.io',
+            github: 'https://github.com/mkfsn',
+            twitter: 'https://twitter.com/mkfsn',
+            linkedin: 'https://linedin.com',
+        },
+        summary: 'Quick-learning software engineer with experience in computer science, programming and networking for various projects.',
+    };
     return (
         <header id="me">
-            <div className={style.profile}>
+            <div>
                 <h1 className={style.name}>
-                    <span>{name}</span>
+                    <span>{me.name}</span>
                     &nbsp;
-                    <span className={style.aka}>{aka}</span>
+                    {me.nickname !== '' && (
+                        <span className={style.aka}>(aka {me.nickname})</span>
+                    )}
                 </h1>
-                <h4 className={style.address}>{address}</h4>
+                <h4 className={style.address}>{me.location}. {me.email}</h4>
                 <h4 className={style.sns}>
-                    {links.map((link) => (
-                        <a className={style.link} target="_blank" href={link.href} key={link.logo}>
-                            <ion-icon name={link.logo} style={{color: link.color}}/>
-                        </a>
-                    ))}
+                    <IconLink link={me.sns.home} name="home" color="rgb(78,165,133)"/>
+                    <IconLink link={me.sns.github} name="logo-github" color="rgb(33,37,40)"/>
+                    <IconLink link={me.sns.twitter} name="logo-twitter" color="rgb(43,152,236)"/>
+                    <IconLink link={me.sns.linkedin} name="logo-linkedin" color="rgb(23,104,166)"/>
                 </h4>
+                <div className={style.avatar}>
+                    <img src={me.avatar} alt="avatar"/>
+                </div>
             </div>
-            <div className={style.avatar}>
-               <img src="/resume/avatar.png" alt="avatar"/>
-            </div>
+            <section>
+                <h1>Summary</h1>
+                <p>{me.summary}</p>
+            </section>
         </header>
     )
 }
