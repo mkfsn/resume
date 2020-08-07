@@ -52,6 +52,7 @@ export default function Experiences() {
                 from: new Date(2010, 9-1, 1),
                 to: new Date(2013, 6-1, 1),
             },
+            icon: 'https://scontent.fkhh1-1.fna.fbcdn.net/v/t1.0-9/11232064_885586498187186_2626790383753317843_n.png?_nc_cat=106&_nc_sid=85a577&_nc_ohc=zEkI2EQ0HJMAX-i5tTL&_nc_ht=scontent.fkhh1-1.fna&oh=fbaaf10901ae081009d4901128c6ee8d&oe=5F546C90',
             details: [
                 'Reconfigured, upgrade, and replaced layer 2/3 switches',
                 'Replaced broken RJ45 sockets',
