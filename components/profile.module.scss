@@ -1,53 +1,56 @@
-.aka {
-    font-size: 1.5rem;
-    color: #595959;
-}
+.profile {
+    .name {
+        & > span {
+            display: inline-block;
+        }
+        .aka {
+            font-size: 1.5rem;
+            color: #595959;
+        }
+    }
 
-.avatar {
-    display: none;
-    width: 128px;
-    position: absolute;
-    border-radius: 50%;
-    top: 1.5rem;
-    right: 2rem;
-
-    img {
-        width: 100%;
+    .avatar {
+        display: none;
+        width: 128px;
+        position: absolute;
         border-radius: 50%;
-        border: 2px solid #aaa;
-        box-shadow: 0 0 18px -8px;
-        // Prevent displaying black background on print when using box-shadow.
-        -webkit-print-color-adjust: exact;
+        top: 1.5rem;
+        right: 2rem;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+            border: 2px solid #aaa;
+            box-shadow: 0 0 18px -8px;
+            // Prevent displaying black background on print when using box-shadow.
+            -webkit-print-color-adjust: exact;
+        }
+
+        @media print {
+            display: block;
+        }
     }
 
-    @media print {
-        display: block;
-    }
-}
-
-.name > span {
-    display: inline-block;
-}
-
-.sns {
-    display: flex;
-    align-items: center;
-    margin-bottom: 9px;
-}
-
-.link {
-    &:visited,
-    &:hover,
-    &:active {
-        color: var(--black) !important;
+    .address {
+        margin: 0;
     }
 
-    & > ion-icon {
-        font-size: var(--icon-size);
-        margin: 0 .1rem;
-    }
-}
+    .sns {
+        display: flex;
+        align-items: center;
+        margin-bottom: 9px;
 
-.address {
-    margin: 0;
+        .link {
+            &:visited,
+            &:hover,
+            &:active {
+                color: var(--black) !important;
+            }
+
+            ion-icon {
+                font-size: var(--icon-size);
+                margin: 0 .1rem;
+            }
+        }
+    }
 }

@@ -25,7 +25,7 @@ export default function Profile() {
     };
     return (
         <header id="me">
-            <div>
+            <div className={style.profile}>
                 <h1 className={style.name}>
                     <span>{me.name}</span>
                     &nbsp;
