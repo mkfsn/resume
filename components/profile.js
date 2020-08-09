@@ -1,3 +1,5 @@
+import { i18n, withTranslation } from '../i18n'
+
 import style from "./profile.module.scss"
 
 function IconLink(prop) {
@@ -8,7 +10,7 @@ function IconLink(prop) {
     )
 }
 
-export default function Profile() {
+const Profile = ({t}) => {
     const me = {
         name: 'Pei-Ming Wu',
         nickname: 'mkfsn',
@@ -52,9 +54,10 @@ export default function Profile() {
                     <img src={me.avatar} alt="avatar"/>
                 </div>
                 <hr/>
-                <p>{me.summary}</p>
+                <p onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')}>{t(me.summary)}</p>
             </div>
         </header>
     )
 }
 
+export default withTranslation('common')(Profile)
