@@ -9,10 +9,9 @@
 
 html, body {
     font-family: 'Noto Sans', sans-serif;
-}
-
-body {
-    margin: var(--gap);
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 section {

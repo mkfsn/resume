@@ -1,11 +1,23 @@
+@import '../styles/breakpoints';
+
 .profile {
     background-color: #ebebeb;
     height: 60vh;
-    margin: -1rem -1rem 0 -1rem;
     display: grid;
     padding: 1rem 1rem 1rem calc(130px - 1vw);
     align-content: center;
     min-height: 270px;
+
+    @mixin margin-breakpoint ($size) {
+        $side: calc(-50vw + #{$size / 2});
+        margin-left: $side;
+        margin-right: $side;
+    }
+    @each $size in $sm, $md, $lg, $xl {
+        @media (min-width: $size) {
+            @include margin-breakpoint($size);
+        }
+    }
 
     @media print {
         background-color: white;
@@ -17,6 +29,14 @@
 
     & > .container {
         max-width: 1200px;
+        @mixin max-width($size) {
+            max-width: $size;
+        }
+        @each $size in $sm, $md, $lg, $xl {
+            @media (min-width: $size) {
+                @include max-width($size);
+            }
+        }
     }
 
     .name {

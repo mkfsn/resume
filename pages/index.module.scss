@@ -1,0 +1,17 @@
+@import '../styles/breakpoints';
+
+.home {
+  main {
+    margin: 0;
+    @mixin margin-breakpoint($size) {
+      $side: calc((100vw - #{$size})/2);
+      margin-left: $side;
+      margin-right: $side;
+    }
+    @each $size in $sm, $md, $lg, $xl {
+      @media (min-width: $size) {
+        @include margin-breakpoint($size);
+      }
+    }
+  }
+}

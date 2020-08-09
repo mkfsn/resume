@@ -4,10 +4,11 @@ import Education from "../components/education";
 import Experiences from "../components/experiences";
 import Projects from "../components/projects";
 import Skills from "../components/skills";
+import style from './index.module.scss';
 
 export default function Home() {
     return (
-        <div className="container">
+        <div className={style.home}>
             <Head>
                 <title>Pei-Ming Wu</title>
                 <link rel="icon" href="/favicon.ico" />
