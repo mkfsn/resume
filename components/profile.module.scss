@@ -5,6 +5,7 @@
     display: grid;
     padding: 1rem 1rem 1rem calc(130px - 1vw);
     align-content: center;
+    min-height: 270px;
 
     @media print {
         background-color: white;
