@@ -11,7 +11,9 @@ function Project(project, theme) {
             </div>
             <div className={style.details}>
                 <ul>
-                    <li>{project.details}</li>
+                    {project.details.map((item) => (
+                        <li key={item}>{item}</li>
+                    ))}
                 </ul>
             </div>
         </div>
@@ -23,7 +25,9 @@ export default function Projects() {
         {
             type: 'Master Thesis',
             title: 'Design and Implementation of a Network Traffic Classification Caching Mechanism Based on Net-DPIS',
-            details: 'Improved performance of a kernel-based Deep Packet Inspection System',
+            details: [
+                'Improved performance of a host-based DPIS (Deep Packet Inspection System) which was developed as Linux kernel module.',
+            ],
         },
     ];
     return (
