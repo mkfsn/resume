@@ -9,6 +9,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "js-yaml-loader": "1.2.2",
     "next": "9.4.4",
     "next-i18next": "6.0.2",
     "react": "16.13.1",
