@@ -1,0 +1,39 @@
+.education {
+    $width-breakpoint: 500px;
+
+    display: grid;
+    grid-template-areas: "name   date"
+                         "degree degree";
+    margin-bottom: var(--gap);
+
+    @media (max-width: $width-breakpoint) {
+        grid-template-areas: "name"
+                             "date"
+                             "degree";
+    }
+
+    & > .degree {
+        grid-area: degree;
+        margin: 0;
+    }
+
+    & > .name {
+        grid-area: name;
+        font-weight: var(--font-bold);
+
+        @media (max-width: $width-breakpoint) {
+            margin-bottom: 0;
+        }
+    }
+
+    & > .date {
+        grid-area: date;
+        justify-self: right;
+
+        @media (max-width: $width-breakpoint) {
+            margin: .5rem 0;
+            justify-self: flex-start;
+            color: var(--dark-gray);
+        }
+    }
+}

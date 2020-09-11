@@ -1,0 +1,39 @@
+.project {
+    $width-breakpoint: 500px;
+    $gap: var(--gap);
+    $pink: #e661a9;
+    display: grid;
+    column-gap: 1rem;
+    grid-template-areas: "title   type"
+                         "details details";
+    margin-bottom: $gap;
+
+    .type {
+        grid-area: type;
+        justify-self: right;
+        @media (max-width: $width-breakpoint) {
+            margin: .5rem 0;
+            justify-self: flex-start;
+            color: var(--dark-gray);
+        }
+    }
+
+    .title {
+        grid-area: title;
+        p {
+            font-weight: var(--font-bold);
+            @media (max-width: $width-breakpoint) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .details {
+        grid-area: details;
+        ul {
+            margin: 0;
+            padding-left: calc(#{$gap} * 1.5);
+            word-break: break-all;
+        }
+    }
+}
