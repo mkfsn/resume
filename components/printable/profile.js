@@ -1,7 +1,9 @@
 import React from "react";
 import style from "./profile.module.scss";
 import {i18n, withTranslation} from "../../i18n";
+import Icon from "../shared/icon";
 import IconLink from "../shared/icon-link";
+import ThemeSelector from "../shared/theme-selector";
 
 const Profile = ({t, profile}) => {
     return (
@@ -22,9 +24,13 @@ const Profile = ({t, profile}) => {
                             {profile.sns.linkedin && <IconLink link={profile.sns.linkedin} name="logo-linkedin" color="rgb(23,104,166)"/>}
                         </>)}
                         <span className={style.location}>
-                            {profile.location}. &nbsp;
+                            <Icon name="pin"/>
+                            {profile.location} &nbsp;
                         </span>
-                        <span>{profile.email}</span>
+                        <span className={style.email}>
+                            <Icon name="mail"/> &nbsp;
+                            {profile.email}
+                        </span>
                     </h4>
                 <hr/>
                 <p onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')}>{t(profile.summary)}</p>

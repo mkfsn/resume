@@ -1,6 +1,8 @@
+import React from "react";
 import { i18n, withTranslation } from '../../i18n'
 import style from "./profile.module.scss"
 import IconLink from "../shared/icon-link";
+import Icon from "../shared/icon";
 
 const Profile = ({profile, t}) => {
     return (
@@ -21,9 +23,13 @@ const Profile = ({profile, t}) => {
                     <IconLink link={profile.sns.twitter} name="logo-twitter" color="rgb(43,152,236)"/>
                     <IconLink link={profile.sns.linkedin} name="logo-linkedin" color="rgb(23,104,166)"/>
                     <span className={style.location}>
-                        {profile.location}. &nbsp;
+                        <Icon name="pin"/>
+                        {profile.location} &nbsp;
                     </span>
-                    <span>{profile.email}</span>
+                    <span className={style.email}>
+                        <Icon name="mail"/> &nbsp;
+                        {profile.email}
+                    </span>
                 </h4>
                 <div className={style.avatar}>
                     <img src={profile.avatar} alt="avatar"/>

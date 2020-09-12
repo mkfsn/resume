@@ -74,7 +74,6 @@
             &:active {
                 color: var(--black) !important;
             }
-
             ion-icon {
                 font-size: var(--icon-size);
                 margin: 0 .1rem;
@@ -84,5 +83,14 @@
 
     .location {
         margin-left: 1rem;
+        ion-icon {
+            font-size: 22px;
+        }
+    }
+
+    .email {
+        ion-icon {
+            font-size: 22px;
+        }
     }
 }
