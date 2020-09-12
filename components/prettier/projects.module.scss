@@ -1,0 +1,57 @@
+.project {
+    $width-breakpoint: 500px;
+    $gap: var(--gap);
+    $pink: #e661a9;
+    display: grid;
+    grid-template-areas: "type title"
+                             "type details";
+    grid-template-columns: min-content auto;
+    column-gap: $gap;
+    margin-top: $gap;
+    margin-left: $gap;
+    max-width: calc(1200px - #{$gap});
+    $radius: 5px;
+
+    .type {
+        grid-area: type;
+        align-self: center;
+        text-align: center;
+        position: relative;
+    }
+
+    @mixin line {
+        position: relative;
+        margin-left: 20px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            background-color: $pink;
+            margin-left: -20px;
+            top: 0;
+            bottom: 0;
+        }
+        & > * {
+            margin-left: $gap;
+        }
+    }
+
+    .title {
+        grid-area: title;
+        @include line;
+        background-color: rgba($pink, 0.15);
+        border-top-right-radius: $radius;
+        border-top-left-radius: $radius;
+    }
+
+    .details {
+        grid-area: details;
+        @include line;
+        background-color: rgba($pink, 0.15);
+        border-bottom-right-radius: $radius;
+        border-bottom-left-radius: $radius;
+        & > ul {
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.link {
+  &:visited,
+  &:hover,
+  &:active {
+    color: var(--black) !important;
+  }
+  ion-icon {
+    font-size: var(--icon-size);
+    margin: 0 .1rem;
+  }
+}

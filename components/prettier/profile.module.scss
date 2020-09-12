@@ -1,4 +1,4 @@
-@import '../styles/breakpoints';
+@import '../../styles/breakpoints';
 
 .profile {
     background-color: #ebebeb;
@@ -17,14 +17,6 @@
         @media (min-width: $size) {
             @include margin-breakpoint($size);
         }
-    }
-
-    @media print {
-        background-color: white;
-        border-width: 0;
-        padding: 0;
-        margin: initial;
-        height: auto;
     }
 
     & > .container {
@@ -65,10 +57,6 @@
             // Prevent displaying black background on print when using box-shadow.
             -webkit-print-color-adjust: exact;
         }
-
-        @media print {
-            display: block;
-        }
     }
 
     .address {
@@ -92,5 +80,9 @@
                 margin: 0 .1rem;
             }
         }
+    }
+
+    .location {
+        margin-left: 1rem;
     }
 }

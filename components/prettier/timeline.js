@@ -1,19 +1,23 @@
 import style from "./timeline.module.scss";
-import dateFormatter from "./formatter";
+import dateFormatter from "../shared/formatter";
 
 // -1 denotes undefined behavior
 function checkOverlap(t1, t2) {
-    if (t1.from >= t2.from && t1.to <= t2.to) {
-        //   from ---- t1 ---- to
-        // from ------ t2 ------- to
+    if (dateContains(t2, t1)) {
         return -1;
-    } else if (t1.from <= t2.from && t1.to >= t2.to) {
-        // from ------ t1 ---------- to
-        //   from ---- t2 ----- to
+    } else if (dateContains(t1, t2)) {
         return 2;
     }
     // TODO(mkfsn): implement other cases
     return -1
+}
+
+// dateContains returns whether t1 contains t2:
+// |--------- t1 ----------|
+//    | ----- t2 --------|
+function dateContains(t1, t2) {
+    return new Date(t1.from) <= new Date(t2.from) &&
+        new Date(t1.to) >= new Date(t2.to)
 }
 
 function parsePeriods(periods) {
@@ -28,7 +32,7 @@ function parsePeriods(periods) {
                 case -1: // ignore
                     break;
                 case 2:
-                    if (period.date.from - v.date.from > v.date.to - period.date.to) {
+                    if (new Date(period.date.from) - new Date(v.date.from) > new Date(v.date.to) - new Date(period.date.to)) {
                         v.afterChildren.push(period);
                     } else {
                         v.beforeChildren.push(period);

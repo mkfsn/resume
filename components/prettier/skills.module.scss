@@ -1,4 +1,6 @@
 .skills {
+    margin-bottom: 3rem;
+
     ul {
         padding-left: calc(var(--gap) * 1.5);
     }
@@ -7,20 +9,12 @@
         margin-bottom: 0;
     }
 
-    .set-wrapper {
-        display: none;
-
-        @media print {
-            display: block;
-        }
-    }
-
     .group-wrapper {
         $gap: 1rem;
 
         display: grid;
         grid-auto-flow: row;
-        grid-template-columns: repeat(auto-fill, 46vw);
+        grid-template-columns: repeat(auto-fill, 40vw);
         column-gap: $gap * 2;
         row-gap: $gap * 2;
         margin-top: $gap * 1.5;
@@ -31,21 +25,6 @@
 
         @media screen and (min-width: 501px) and (max-width: 800px) {
             grid-template-columns: repeat(auto-fill, 95vw);
-        }
-
-        @media print {
-            display: none;
-        }
-    }
-
-    .skill-set {
-        float: left;
-        width: 45vw;
-        height: 7rem;
-        margin-bottom: 1rem;
-
-        h3 {
-            text-transform: capitalize;
         }
     }
 

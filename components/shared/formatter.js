@@ -1,5 +1,9 @@
-export default function dateFormatter(date) {
+export default function dateFormatter(input) {
+    let date = newDate(input);
     const now = new Date();
+    if (!isValidDate(date)) {
+        date = now;
+    }
     if (now.getFullYear() === date.getFullYear() && now.getMonth() === date.getMonth()) {
         return 'Current';
     }
@@ -10,4 +14,15 @@ export default function dateFormatter(date) {
     const month = monthNames[date.getMonth()];
     const year = date.getFullYear().toString().substr(2);
     return `${month}'${year}`;
+}
+
+function newDate(d) {
+    if (d instanceof Date) {
+        return d
+    }
+    return new Date(d)
+}
+
+function isValidDate(d) {
+    return d instanceof Date && !isNaN(d);
 }

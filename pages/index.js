@@ -1,12 +1,14 @@
+import React from "react";
 import Head from 'next/head'
-import Profile from '../components/profile'
-import Education from "../components/education";
-import Experiences from "../components/experiences";
-import Projects from "../components/projects";
-import Skills from "../components/skills";
 import style from './index.module.scss';
+import { useRouter } from 'next/router'
+import Prettier from "../components/prettier/prettier"
+import Printable from "../components/printable/printable";
 
 export default function Home() {
+    const router = useRouter()
+    const { theme } = router.query;
+    let component = loadComponent(theme);
     return (
         <div className={style.home}>
             <Head>
@@ -16,14 +18,16 @@ export default function Home() {
                 {/*font*/}
                 <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" />
             </Head>
-            <main>
-                <Profile/>
-                <Education/>
-                <Experiences/>
-                <Projects/>
-                <Skills/>
-            </main>
-            <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+            {component}
+            <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"/>
         </div>
     )
+}
+
+function loadComponent(theme) {
+    switch (theme) {
+    case "printable":
+        return <Printable/>
+    }
+    return <Prettier/>
 }

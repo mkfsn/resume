@@ -11,9 +11,6 @@
                              "date"
                              "details";
     }
-    @media print {
-        display: grid;
-    }
 
     & > .date {
         grid-area: date;

@@ -14,10 +14,6 @@ $black: rgb(0, 0, 0);
   margin-bottom: 19.92px;
   max-width: 1200px;
 
-  @media print {
-    display: none;
-  }
-
   &.green::after {
     border-right-color: $green;
   }

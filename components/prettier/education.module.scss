@@ -11,9 +11,6 @@
                              "date"
                              "degree";
     }
-    @media print {
-        display: grid;
-    }
 
     & > .degree {
         grid-area: degree;
