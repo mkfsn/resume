@@ -4,6 +4,7 @@ import style from './index.module.scss';
 import { useRouter } from 'next/router'
 import Prettier from "../components/prettier/prettier"
 import Printable from "../components/printable/printable";
+import ThemeSelector from "../components/shared/theme-selector";
 
 export default function Home() {
     const router = useRouter()
@@ -18,6 +19,9 @@ export default function Home() {
                 {/*font*/}
                 <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" />
             </Head>
+            <div className={style["theme-selector"]}>
+                <ThemeSelector/>
+            </div>
             {component}
             <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"/>
         </div>
