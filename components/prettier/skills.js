@@ -16,7 +16,7 @@ function SkillBar(skillBar) {
 function SkillGroup(skillGroup) {
     return (
         <div className={style['skill-group']} key={skillGroup.title}>
-            <header className={style.header}>{skillGroup.title}</header>
+            <h3 className={style.header}>{skillGroup.title}</h3>
             <div className={style.body}>
                 {
                     skillGroup.skills.map((skill) => {

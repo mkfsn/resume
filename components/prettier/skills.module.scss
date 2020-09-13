@@ -1,5 +1,8 @@
+@import '../../styles/breakpoints';
+
 .skills {
-    margin-bottom: 3rem;
+    margin-bottom: 2em;
+    padding: 0 1em;
 
     ul {
         padding-left: calc(var(--gap) * 1.5);
@@ -10,26 +13,22 @@
     }
 
     .group-wrapper {
-        $gap: 1rem;
+        $gap: 1em;
 
         display: grid;
         grid-auto-flow: row;
-        grid-template-columns: repeat(auto-fill, 40vw);
-        column-gap: $gap * 2;
-        row-gap: $gap * 2;
+        grid-template-columns: repeat(auto-fill, calc(50% - #{$gap * .75}));
+        column-gap: $gap * 1.5;
+        row-gap: $gap * 1.5;
         margin-top: $gap * 1.5;
 
-        @media screen and (max-width: 500px) {
-            grid-template-columns: repeat(auto-fill, 90vw);
-        }
-
-        @media screen and (min-width: 501px) and (max-width: 800px) {
-            grid-template-columns: repeat(auto-fill, 95vw);
+        @media screen and (max-width: $sm) {
+            grid-template-columns: repeat(auto-fill, 100%);
         }
     }
 
     .skill-group {
-        $gap: .5rem;
+        $gap: .5em;
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 11px 0 rgba(0, 0, 0, 0.19);
 
         .header {
@@ -39,6 +38,7 @@
             height: $gap * 4;
             line-height: $gap * 4;
             padding-left: $gap;
+            margin-top: 0;
         }
 
         .body {
@@ -48,11 +48,11 @@
 
     .skill-bar {
         $radius: 3px;
-        $padding: .5rem;
-        $height: 22px;
+        $padding: .5em;
+        $height: 1.5em;
         width: 100%;
         margin-bottom: $padding;
-        font-size: 0.9rem;
+        font-size: 0.9em;
 
         .filled {
             display: block;
