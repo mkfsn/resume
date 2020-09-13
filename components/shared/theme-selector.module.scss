@@ -4,6 +4,7 @@
 
   position: relative;
   display: inline-block;
+  z-index: 10000;
 
   @media print {
     display: none;
@@ -12,8 +13,8 @@
   .dropdown-btn {
     background-color: $btn-color;
     color: white;
-    padding: .5rem;
-    font-size: 1rem;
+    padding: .5em;
+    font-size: 1em;
     border: none;
     cursor: pointer;
   }
@@ -32,7 +33,6 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 10rem;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 

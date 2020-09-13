@@ -22,8 +22,9 @@ const Profile = ({profile, t}) => {
                     {profile.sns && <SocialMedia sns={profile.sns}/>}
                     <span className={style.location}>
                         <Icon name="pin"/>
-                        {profile.location} &nbsp;
+                        {profile.location}
                     </span>
+                    &nbsp;
                     <span className={style.email}>
                         <Icon name="mail"/> &nbsp;
                         {profile.email}

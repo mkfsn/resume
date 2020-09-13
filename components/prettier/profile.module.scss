@@ -1,22 +1,33 @@
 @import '../../styles/breakpoints';
 
 .profile {
-    background-color: #ebebeb;
-    height: 60vh;
-    display: grid;
-    padding: 1rem 1rem 1rem calc(130px - 1vw);
     align-content: center;
-    min-height: 270px;
+    background-color: #ebebeb;
+    display: grid;
+    padding: 2.4em 1em;
+    position: relative;
 
-    @mixin margin-breakpoint ($size) {
-        $side: calc(-50vw + #{$size / 2});
-        margin-left: $side;
-        margin-right: $side;
-    }
-    @each $size in $sm, $md, $lg, $xl {
-        @media (min-width: $size) {
-            @include margin-breakpoint($size);
+    @mixin aside($leftOrRight) {
+        background-color: #ebebeb;
+        bottom: 0;
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        @each $size in $sm, $md, $lg, $xl {
+            @media (min-width: $size) {
+                width: calc((100vw - #{$size})/2);
+                $leftOrRight: calc((#{$size} - 100vw)/2);
+            }
         }
+    }
+
+    &:before {
+        @include aside(left);
+    }
+
+    &:after {
+        @include aside(right);
     }
 
     & > .container {
@@ -36,7 +47,7 @@
             display: inline-block;
         }
         .aka {
-            font-size: 1.5rem;
+            font-size: 0.7em;
             color: #595959;
         }
     }
@@ -46,8 +57,8 @@
         width: 128px;
         position: absolute;
         border-radius: 50%;
-        top: 1.5rem;
-        right: 2rem;
+        top: 1.5em;
+        right: 2em;
 
         img {
             width: 100%;
@@ -70,15 +81,15 @@
     }
 
     .location {
-        margin-left: 1rem;
+        margin-left: .1em;
         ion-icon {
-            font-size: 22px;
+            font-size: 1.375em;
         }
     }
 
     .email {
         ion-icon {
-            font-size: 22px;
+            font-size: 1.375em;
         }
     }
 }

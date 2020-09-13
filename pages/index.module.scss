@@ -1,6 +1,9 @@
 @import '../styles/breakpoints';
 
 .home {
+  @media (max-width: $md) {
+    font-size: 12px;
+  }
   main {
     margin: 0;
     @mixin margin-breakpoint($size) {
