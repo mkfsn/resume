@@ -4,6 +4,7 @@ import {i18n, withTranslation} from "../../i18n";
 import Icon from "../shared/icon";
 import IconLink from "../shared/icon-link";
 import ThemeSelector from "../shared/theme-selector";
+import SocialMedia from "../shared/social-media";
 
 const Profile = ({t, profile}) => {
     return (
@@ -17,12 +18,7 @@ const Profile = ({t, profile}) => {
                     )}
                 </h1>
                     <h4 className={style.sns}>
-                        {profile.sns && (<>
-                            {profile.sns.home && <IconLink link={profile.sns.home} name="home" color="rgb(78,165,133)"/>}
-                            {profile.sns.github && <IconLink link={profile.sns.github} name="logo-github" color="rgb(33,37,40)"/>}
-                            {profile.sns.twitter && <IconLink link={profile.sns.twitter} name="logo-twitter" color="rgb(43,152,236)"/>}
-                            {profile.sns.linkedin && <IconLink link={profile.sns.linkedin} name="logo-linkedin" color="rgb(23,104,166)"/>}
-                        </>)}
+                        {profile.sns && <SocialMedia sns={profile.sns}/>}
                         <span className={style.location}>
                             <Icon name="pin"/>
                             {profile.location} &nbsp;

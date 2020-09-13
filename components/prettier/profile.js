@@ -3,6 +3,7 @@ import { i18n, withTranslation } from '../../i18n'
 import style from "./profile.module.scss"
 import IconLink from "../shared/icon-link";
 import Icon from "../shared/icon";
+import SocialMedia from "../shared/social-media";
 
 const Profile = ({profile, t}) => {
     return (
@@ -18,10 +19,7 @@ const Profile = ({profile, t}) => {
                 <h4 className={style.address}>
                 </h4>
                 <h4 className={style.sns}>
-                    <IconLink link={profile.sns.home} name="home" color="rgb(78,165,133)"/>
-                    <IconLink link={profile.sns.github} name="logo-github" color="rgb(33,37,40)"/>
-                    <IconLink link={profile.sns.twitter} name="logo-twitter" color="rgb(43,152,236)"/>
-                    <IconLink link={profile.sns.linkedin} name="logo-linkedin" color="rgb(23,104,166)"/>
+                    {profile.sns && <SocialMedia sns={profile.sns}/>}
                     <span className={style.location}>
                         <Icon name="pin"/>
                         {profile.location} &nbsp;
