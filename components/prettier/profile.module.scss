@@ -17,7 +17,7 @@
         @each $size in $sm, $md, $lg, $xl {
             @media (min-width: $size) {
                 width: calc((100vw - #{$size})/2);
-                $leftOrRight: calc((#{$size} - 100vw)/2);
+                #{$leftOrRight}: calc((#{$size} - 100vw)/2);
             }
         }
     }
