@@ -1,57 +1,54 @@
-.project {
-    $width-breakpoint: 500px;
-    $gap: var(--gap);
-    $pink: #e661a9;
-    display: grid;
-    grid-template-areas: "type title"
-                             "type details";
-    grid-template-columns: min-content auto;
-    column-gap: $gap;
-    margin-top: $gap;
-    margin-left: $gap;
-    max-width: calc(1200px - #{$gap});
-    $radius: 5px;
+$gap: 1em;
+$pink: #e561a9;
+$light-pink: rgba($pink, 0.15);
+$radius: 5px;
 
-    .type {
-        grid-area: type;
-        align-self: center;
-        text-align: center;
-        position: relative;
-    }
+@mixin label {
+    background-color: $pink;
+    border-radius: $radius;
+    color: white;
+    font-size: .9em;
+    font-weight: 400;
+    padding: .2em;
+    text-align: center;
+}
 
-    @mixin line {
-        position: relative;
-        margin-left: 20px;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 4px;
-            background-color: $pink;
-            margin-left: -20px;
-            top: 0;
-            bottom: 0;
+.projects {
+    padding: 0 1em;
+
+    .project {
+        background-color: $light-pink;
+        border-radius: $radius;
+        max-width: calc(1200px - #{$gap});
+        margin-top: $gap;
+        padding: 0 $gap;
+
+        .header {
+            display: flex;
+            gap: $gap;
+            h4 {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .title {
+                flex: 7;
+            }
+            .type {
+                flex: 1;
+                p {
+                    @include label;
+                    line-height: 1.2em;
+                }
+            }
         }
-        & > * {
-            margin-left: $gap;
-        }
-    }
 
-    .title {
-        grid-area: title;
-        @include line;
-        background-color: rgba($pink, 0.15);
-        border-top-right-radius: $radius;
-        border-top-left-radius: $radius;
-    }
-
-    .details {
-        grid-area: details;
-        @include line;
-        background-color: rgba($pink, 0.15);
-        border-bottom-right-radius: $radius;
-        border-bottom-left-radius: $radius;
-        & > ul {
-            margin-top: 0;
+        .details {
+            ul {
+                margin-top: 0;
+                padding-left: 1.5em;
+            }
         }
     }
 }
