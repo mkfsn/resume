@@ -1,7 +1,7 @@
 $gap: 10px;
 $timeline-width: 4px;
-$outline-width: 70px;
-$outline-gap: $gap;
+$outline-width: 2em;
+$outline-gap: 1em;
 $green: rgb(95, 153, 80);
 $blue: rgb(83, 84, 234);
 $yellow: rgb(229, 164, 112);
@@ -24,13 +24,14 @@ $black: rgb(0, 0, 0);
     border-right-color: $yellow;
   }
 
+  // For the dotted line
   &::after {
     content: '';
     top: 0;
     bottom: 0;
     left: 0;
     position: absolute;
-    padding-left: $outline-gap + $outline-width;
+    padding-left: $outline-width;
     border-right-width: $timeline-width;
     border-right-style: dotted;
   }
@@ -38,7 +39,7 @@ $black: rgb(0, 0, 0);
   .timeline-container {
     display: flex;
     position: relative;
-    padding-left: $outline-width + $outline-gap;
+    //padding-left: $outline-width + $outline-gap;
     padding-top: $gap * 5;
 
     &:first-child {
@@ -46,19 +47,16 @@ $black: rgb(0, 0, 0);
     }
 
     .timeline-outline {
-      position: inherit;
+      z-index: 98;
+      position: relative;
       display: flex;
       flex-direction: column;
       border-right-width: $timeline-width;
       border-right-style: solid;
-      margin-left: -$outline-gap - $outline-width;
-      padding-right: $outline-gap * 2;
+      //margin-left: -$outline-gap - $outline-width;
+      padding-right: $outline-gap;
       text-align: right;
-
-      & > .end {
-        width: $outline-width - $outline-gap;
-        margin-top: -$gap;
-      }
+      width: 1em;
 
       & > .icon {
         height: 100%;
@@ -73,9 +71,20 @@ $black: rgb(0, 0, 0);
         }
       }
 
+      @mixin date-text($top-or-bottom) {
+        position: relative;
+        #{$top-or-bottom}: 0;
+        left: 3.5em;
+      }
+
+      & > .end {
+        @include date-text(top);
+        margin-top: -$gap;
+      }
+
       & > .begin {
+        @include date-text(bottom);
         margin-top: auto;
-        width: $outline-width - $outline-gap;
         margin-bottom: -$gap;
       }
 
@@ -134,13 +143,16 @@ $black: rgb(0, 0, 0);
     }
 
     .timeline-content {
-      padding: $gap 0 $gap 2*$gap;
+      padding: 0 $gap;
+      margin-top: $gap*2;
+      margin-bottom: $gap*2;
       box-shadow: 0 0 4px rgba($black, 0.12), 0 2px 2px rgba($black, 0.08);
       position: relative;
       border-radius: 6px;
-      margin-left: $gap * 3;
-      width: 100vw;
-      max-width: calc(100vw - 170px);
+      $offset: $outline-width;
+      width: 100%;
+      z-index: 999;
+      margin-left: calc(-#{$outline-width} - 4px);
 
       .title > h3 {
         margin-top: $gap;
@@ -149,33 +161,33 @@ $black: rgb(0, 0, 0);
 
       .detail {
         margin-bottom: $gap;
+        ul {
+          padding-left: 2em;
+        }
       }
 
       &.green {
-        background-color: rgba($green, 0.15);
+        background-color: rgb(240, 249, 238);
       }
       &.blue {
-        background-color: rgba($blue, 0.15);
+        background-color: rgb(225, 219, 235);
       }
       &.yellow {
-        background-color: rgba($yellow, 0.15);
+        background-color: rgb(251, 242, 234);
       }
     }
 
     &.overlap {
-      margin-top: $gap;
+      margin-top: $gap * 2;
       margin-bottom: $gap * 2;
 
       .timeline-outline {
-        left: -134px;
+        left: -$gap;
         z-index: 999;
       }
 
       .timeline-content {
-        margin-right: $gap;
         width: 100%;
-        margin-left: -9 * $gap;
-        padding-right: 5 * $gap;
       }
     }
   }

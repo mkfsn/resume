@@ -1,3 +1,4 @@
+import React from "react";
 import style from "./timeline.module.scss";
 import dateFormatter from "../shared/formatter";
 
@@ -52,11 +53,11 @@ function timelineOutline(date, color, icon) {
     return (
         <div className={style['timeline-outline'] + ' ' + style[color]}>
             <div className={style.end}>{dateFormatter(date.to)}</div>
-            {icon !== undefined && (
-                <div className={style.icon}>
-                    <img alt="icon" src={icon} />
-                </div>
-            )}
+            {/*{icon !== undefined && (*/}
+            {/*    <div className={style.icon}>*/}
+            {/*        <img alt="icon" src={icon} />*/}
+            {/*    </div>*/}
+            {/*)}*/}
             <div className={style.begin}>{dateFormatter(date.from)}</div>
         </div>
     )
