@@ -1,18 +1,33 @@
+.experiences {
+    margin: 0 .5em;
+    padding-bottom: 1em;
+}
+
 .experience {
     $width-breakpoint: 500px;
 
     display: grid;
     grid-template-areas: "title   date"
                          "details details";
-    margin-bottom: var(--gap);
+    grid-row-gap: .5em;
+    margin-top: 1.5em;
+
+    @media (max-width: $width-breakpoint) {
+        grid-row-gap: .25em;
+        grid-template-areas: "title"
+                             "date"
+                             "details";
+    }
 
     & > .date {
         grid-area: date;
         justify-self: right;
+        margin: 0;
+        font-size: .9em;
+        line-height: 1.6em;
 
         @media (max-width: $width-breakpoint) {
-            margin: .5rem 0;
-            justify-self: flex-start;
+            justify-self: left;
             color: var(--dark-gray);
         }
     }
@@ -20,6 +35,8 @@
     & > .title {
         grid-area: title;
         font-weight: var(--font-bold);
+        align-self: center;
+        margin: 0;
 
         @media (max-width: $width-breakpoint) {
             margin-bottom: 0;

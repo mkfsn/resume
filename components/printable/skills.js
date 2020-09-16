@@ -24,7 +24,6 @@ export default function Skills({skills}) {
     return (
         <section className={style.skills}>
             <h1>Skills</h1>
-            {/* do print */}
             <div className={style['set-wrapper']}>
                 {skills.map((group) => SkillSet(group))}
             </div>

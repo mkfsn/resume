@@ -8,8 +8,8 @@
   flex: 1 1;
   border-width: 0;
   padding: 0;
-  margin: initial;
   height: auto;
+  margin: 0 .5em;
 
   & > .container {
     max-width: 1200px;
@@ -28,13 +28,9 @@
       display: inline-block;
     }
     .aka {
-      font-size: 1.5rem;
+      font-size: .8em;
       color: #595959;
     }
-  }
-
-  .address {
-    margin: 0;
   }
 
   .sns {
@@ -44,7 +40,7 @@
   }
 
   .location {
-    margin-left: 1rem;
+    margin-left: .2em;
     ion-icon {
       font-size: 20px;
     }

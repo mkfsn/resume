@@ -1,12 +1,19 @@
+.education-container {
+    margin: 0 .5em;
+    padding-bottom: 1em;
+}
+
 .education {
     $width-breakpoint: 500px;
 
     display: grid;
     grid-template-areas: "name   date"
                          "degree degree";
-    margin-bottom: var(--gap);
+    grid-row-gap: .5em;
+    margin-top: 1.5em;
 
     @media (max-width: $width-breakpoint) {
+        grid-row-gap: .25em;
         grid-template-areas: "name"
                              "date"
                              "degree";
@@ -20,18 +27,17 @@
     & > .name {
         grid-area: name;
         font-weight: var(--font-bold);
-
-        @media (max-width: $width-breakpoint) {
-            margin-bottom: 0;
-        }
+        margin: 0;
     }
 
     & > .date {
         grid-area: date;
         justify-self: right;
+        margin: 0;
+        font-size: .9em;
+        line-height: 1.6em;
 
         @media (max-width: $width-breakpoint) {
-            margin: .5rem 0;
             justify-self: flex-start;
             color: var(--dark-gray);
         }
