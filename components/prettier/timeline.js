@@ -49,22 +49,24 @@ function parsePeriods(periods) {
     return temp;
 }
 
-function timelineOutline(date, color, icon) {
+function timelineOutline(date, color) {
     return (
         <div className={style['timeline-outline'] + ' ' + style[color]}>
             <div className={style.end}>{dateFormatter(date.to)}</div>
-            {/*{icon !== undefined && (*/}
-            {/*    <div className={style.icon}>*/}
-            {/*        <img alt="icon" src={icon} />*/}
-            {/*    </div>*/}
-            {/*)}*/}
             <div className={style.begin}>{dateFormatter(date.from)}</div>
         </div>
     )
 }
 
-function timelineContentTitle(title) {
-    return <div className={style.title}><h3>{title}</h3></div>
+function timelineContentTitle(title, icon) {
+    return <div className={style.title}>
+        <h3>
+            {icon && (
+                <img className={style.icon} alt="" src={icon} />
+            )}
+            {title}
+        </h3>
+    </div>
 }
 
 function timelineContentDetails(details) {
@@ -85,9 +87,9 @@ function timelineContentDetails(details) {
 function Period(period) {
     const afterBlock = period.afterChildren[0] !== undefined && (
         <div className={style['timeline-container'] + ' ' + style['overlap']}>
-            {timelineOutline(period.afterChildren[0].date, period.afterChildren[0].color, period.afterChildren[0].icon)}
+            {timelineOutline(period.afterChildren[0].date, period.afterChildren[0].color)}
             <div className={style['timeline-content'] + ' ' + style[period.afterChildren[0].color] }>
-                {timelineContentTitle(period.afterChildren[0].title)}
+                {timelineContentTitle(period.afterChildren[0].title, period.afterChildren[0].icon)}
                 {timelineContentDetails(period.afterChildren[0].details)}
             </div>
         </div>
@@ -95,10 +97,10 @@ function Period(period) {
 
     return (
         <div className={style['timeline-container']} key={period.title}>
-            {timelineOutline(period.date, period.color, period.icon)}
+            {timelineOutline(period.date, period.color)}
             <div className={style['timeline-content'] + ' ' + style[period.color]}>
                 {afterBlock}
-                {timelineContentTitle(period.title)}
+                {timelineContentTitle(period.title, period.icon)}
                 {timelineContentDetails(period.details)}
             </div>
         </div>

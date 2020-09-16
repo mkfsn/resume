@@ -58,19 +58,6 @@ $black: rgb(0, 0, 0);
       text-align: right;
       width: 1em;
 
-      & > .icon {
-        height: 100%;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-
-        & > img {
-          $size: 30px;
-          height: $size;
-          width: $size;
-        }
-      }
-
       @mixin date-text($top-or-bottom) {
         position: relative;
         #{$top-or-bottom}: 0;
@@ -157,6 +144,17 @@ $black: rgb(0, 0, 0);
       .title > h3 {
         margin-top: $gap;
         margin-bottom: $gap;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          $size: 1.35em;
+          margin-right: .5em;
+          height: $size;
+          width: $size;
+          vertical-align: middle;
+          border-radius: 50%;
+        }
       }
 
       .detail {
