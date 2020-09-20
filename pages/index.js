@@ -2,7 +2,7 @@ import React from "react";
 import Head from 'next/head'
 import style from './index.module.scss';
 import { useRouter } from 'next/router'
-import Prettier from "../components/prettier/prettier"
+import { Prettier } from "../components/Prettier"
 import Printable from "../components/printable/printable";
 import ThemeSelector from "../components/shared/theme-selector";
 

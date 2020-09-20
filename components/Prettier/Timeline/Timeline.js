@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./timeline.module.scss";
-import dateFormatter from "../shared/formatter";
+import style from "./Timeline.module.scss";
+import dateFormatter from "../../shared/formatter";
 
 // -1 denotes undefined behavior
 function checkOverlap(t1, t2) {

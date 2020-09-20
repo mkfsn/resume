@@ -1,6 +1,6 @@
 import React from "react"
-import Timeline from "./timeline"
-import style from "./experiences.module.scss"
+import { Timeline } from "../Timeline"
+import style from "./Experiences.module.scss"
 
 export default function Experiences({experiences}) {
     return (

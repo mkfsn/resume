@@ -1,4 +1,4 @@
-import style from "./skills.module.scss"
+import style from "./Skills.module.scss"
 import React from "react";
 
 function SkillBar(skillBar) {
