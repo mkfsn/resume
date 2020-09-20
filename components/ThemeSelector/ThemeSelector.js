@@ -1,6 +1,6 @@
 import React from "react"
-import style from "./theme-selector.module.scss"
-import Icon from "./icon"
+import style from "./ThemeSelector.module.scss"
+import Icon from "../shared/icon"
 
 export default function ThemeSelector() {
     const isProd = process.env.NODE_ENV === "production"

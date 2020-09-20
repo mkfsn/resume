@@ -4,7 +4,7 @@ import style from './index.module.scss';
 import { useRouter } from 'next/router'
 import { Prettier } from "../components/Prettier"
 import { Printable } from "../components/Printable";
-import ThemeSelector from "../components/shared/theme-selector";
+import { ThemeSelector } from "../components/ThemeSelector";
 
 export default function Home() {
     const router = useRouter()
