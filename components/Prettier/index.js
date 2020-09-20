@@ -1,1 +1,1 @@
-export { default as Prettier } from './prettier';
+export { default as Prettier } from './Prettier';
