@@ -1,10 +1,10 @@
 import me from "../me.yaml"
 import React from "react";
-import Profile from "./profile";
-import Education from "./education";
-import Experiences from "./experiences";
-import Projects from "./projects";
-import Skills from "./skills";
+import { Profile } from "./Profile";
+import { Education } from "./Education";
+import { Experiences } from "./Experiences";
+import { Projects } from "./Projects";
+import { Skills } from "./Skills";
 
 export default function Printable() {
     return <main>

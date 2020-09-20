@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./skills.module.scss";
+import style from "./Skills.module.scss";
 
 function SkillSet(skillGroup) {
     const skillSet = {};

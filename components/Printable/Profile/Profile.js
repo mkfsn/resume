@@ -1,10 +1,8 @@
 import React from "react";
-import style from "./profile.module.scss";
-import {i18n, withTranslation} from "../../i18n";
-import Icon from "../shared/icon";
-import IconLink from "../shared/icon-link";
-import ThemeSelector from "../shared/theme-selector";
-import SocialMedia from "../shared/social-media";
+import style from "./Profile.module.scss";
+import {i18n, withTranslation} from "../../../i18n";
+import Icon from "../../shared/icon";
+import SocialMedia from "../../shared/social-media";
 
 const Profile = ({t, profile}) => {
     return (

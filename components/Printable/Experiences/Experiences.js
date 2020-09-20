@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./experiences.module.scss";
-import dateFormatter from "../shared/formatter";
+import style from "./Experiences.module.scss";
+import dateFormatter from "../../shared/formatter";
 
 export default function Experiences({experiences}) {
     return (

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import style from './index.module.scss';
 import { useRouter } from 'next/router'
 import { Prettier } from "../components/Prettier"
-import Printable from "../components/printable/printable";
+import { Printable } from "../components/Printable";
 import ThemeSelector from "../components/shared/theme-selector";
 
 export default function Home() {

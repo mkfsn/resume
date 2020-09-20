@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./education.module.scss";
-import dateFormatter from "../shared/formatter";
+import style from "./Education.module.scss";
+import dateFormatter from "../../shared/formatter";
 
 export default function Education({educations}) {
     return (<section className={style["education-container"]} id="education">
