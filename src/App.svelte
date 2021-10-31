@@ -4,6 +4,7 @@
     import Experience from "./components/Experience.svelte";
     import Projects from "./components/Projects.svelte";
     import me from './me.yaml';
+    import Skills from "./components/Skills.svelte";
 </script>
 
 <main>
@@ -11,6 +12,7 @@
     <Experience experiences={me.experiences} />
     <Education educations={me.educations} />
     <Projects projects={me.projects} />
+    <Skills skills={me.skills} />
 </main>
 
 <style lang="scss">

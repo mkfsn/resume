@@ -123,6 +123,7 @@ skills:
       - { title: 'Angular', percentage: '75%', label: '2' }
       - { title: 'React', percentage: '20%', label: '2' }
       - { title: 'Vue', percentage: '20%', label: '2' }
+      - { title: 'Svelte', percentage: '40%', label: '2' }
   - title: Programming Language
     color: 'rgb(107, 153, 208)'
     skills:
@@ -144,6 +145,7 @@ skills:
       - { title: 'MySQL', percentage: '70%', label: '2' }
       - { title: 'MongoDB', percentage: '65%', label: '2' }
       - { title: 'InfluxDB', percentage: '65%', label: '2' }
+      - { title: 'DGraph', percentage: '65%', label: '2' }
       - { title: 'Flask', percentage: '70%', label: '3' }
       - { title: 'GIN', percentage: '75%', label: '3' }
       - { title: 'Codeigniter', percentage: '70%', label: '3' }
@@ -154,7 +156,9 @@ skills:
       - { title: 'Kubernetes', percentage: '85%', label: '1' }
       - { title: 'AWS', percentage: '30%', label: '2' }
       - { title: 'Azure', percentage: '65%', label: '2' }
+      - { title: 'GCP', percentage: '55%', label: '2' }
       - { title: 'TravisCI', percentage: '70%', label: '3' }
+      - { title: 'CircleCI', percentage: '65%', label: '3' }
       - { title: 'Github Actions', percentage: '60%', label: '3' }
   - title: Networking & Security
     color: 'rgb(143, 133, 230)'
