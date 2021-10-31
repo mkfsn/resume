@@ -34,8 +34,22 @@ educations:
     details: Bachelor of Science
     color: yellow
 experiences:
+  - title: Go Engineer
+    organization:
+      name: Zeals
+      link: https://zeals.co.jp/en/
+    date:
+      from: "2020-12-15T00:00:00Z"
+    details:
+      - Experience in web back-end development in Go with several technologies (e.g., MySQL, gRPC, DGraph).
+      - Experience with GCP (i.e., GKE, Cloud Logging, Cloud Trace, PubSub, Cloud SQL, Secret Manager)
+      - Experience with monitoring tools (e.g. Datadog)
+    icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
+    color: green
   - title: Lead Developer
-    organization: Glasnostic
+    organization:
+      name: Glasnostic
+      link: https://glasnostic.com
     date:
       from: "2018-11-01T00:00:00Z"
       to: "2020-12-11T00:00:00Z"
@@ -49,7 +63,9 @@ experiences:
       - Experience with several Kubernetes CNIs (e.g., flannel, calico, weave, canal).
     color: green
   - title: Software Engineer
-    organization: Glasnostic
+    organization:
+      name: Glasnostic
+      link: https://glasnostic.com
     date:
       from: "2017-02-01T00:00:00Z"
       to: "2018-11-01T00:00:00Z"
@@ -63,7 +79,9 @@ experiences:
       - Experience with Linux operating system environments (e.g., Ubuntu, CentOS, Alpine).
     color: green
   - title: Network and System Administrator
-    organization: NCKU EE
+    organization:
+      name: NCKU EE
+      link: https://www.ee.ncku.edu.tw/en/
     date:
       from: "2013-09-01T00:00:00Z"
       to: "2015-06-01T00:00:00Z"
@@ -74,7 +92,9 @@ experiences:
       - Experience developing web-based network management system in PHP, HTML, JavaScript with LAMP.
     color: green
   - title: Network and System Administrator
-    organization: NSYSU-CDPA (Campus Dorm-net Promotion Association)
+    organization:
+      name: NSYSU-CDPA (Campus Dorm-net Promotion Association)
+      link: https://cdpa.nsysu.edu.tw
     date:
       from: "2010-09-01T00:00:00Z"
       to: "2013-06-01T00:00:00Z"

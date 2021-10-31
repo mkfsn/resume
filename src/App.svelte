@@ -1,11 +1,13 @@
 <script lang="ts">
     import Profile from "./components/Profile.svelte";
     import Education from "./components/Education.svelte";
+    import Experience from "./components/Experience.svelte";
     import me from './me.yaml';
 </script>
 
 <main>
     <Profile profile={me.profile}/>
+    <Experience experiences={me.experiences} />
     <Education educations={me.educations} />
 </main>
 
