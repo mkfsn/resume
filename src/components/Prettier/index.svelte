@@ -1,11 +1,13 @@
 <script>
     import Profile from "./Profile.svelte";
+    import Projects from "./Projects.svelte";
 
     export let me;
 </script>
 
 <main>
     <Profile profile={me.profile} />
+    <Projects projects={me.projects} />
 </main>
 
 <style lang="scss">
