@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {dateFormatter} from "../utils/formatter";
+    import {dateFormatter} from "../../utils/formatter";
 
     export let educations;
 </script>

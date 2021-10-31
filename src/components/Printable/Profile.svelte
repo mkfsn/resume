@@ -1,5 +1,5 @@
 <script>
-    import SocialMediaLinks from "./SocialMediaLinks.svelte";
+    import SocialMediaLinks from "../SocialMediaLinks.svelte";
     import Fa from 'svelte-fa';
     import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
@@ -30,7 +30,7 @@
 </header>
 
 <style lang="scss">
-  @import '../../styles/breakpoints';
+  @import '../../../styles/breakpoints';
 
   .profile {
     background-color: white;
