@@ -1,10 +1,12 @@
 <script lang="ts">
-	import Profile from "./components/Profile.svelte";
+    import Profile from "./components/Profile.svelte";
+    import Education from "./components/Education.svelte";
     import me from './me.yaml';
 </script>
 
 <main>
     <Profile profile={me.profile}/>
+    <Education educations={me.educations} />
 </main>
 
 <style lang="scss">
