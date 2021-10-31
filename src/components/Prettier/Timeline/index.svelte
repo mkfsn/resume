@@ -1,12 +1,17 @@
 <script type="ts">
+    import {Period} from './period'
+    import TimelinePeriod from "./TimelinePeriod.svelte";
+
     export let color: string;
     export let periods;
 
-    // const periods = Period.parsePeriods(this.props.periods);
+    const parsedPeriods = Period.parsePeriods(periods);
 </script>
 
 <div class="timeline {color}">
-    <!--{periods.map((period: Period) => <TimelinePeriod {...period}/>)}-->
+    {#each parsedPeriods as period}
+        <TimelinePeriod {...period}/>
+    {/each}
 </div>
 
 <style lang="scss">
