@@ -10,29 +10,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
+      - name: Setup Svelte
+        uses: borales/actions-yarn@v2.3.0
         with:
-          node-version: '17.0.1'
-
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.cache/yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install dependencies
-        run: yarn install --production=true --frozen-lockfile
+          cmd: install # will run `yarn install` command'
 
       - name: Build
-        run: yarn build
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build # will run `yarn build` command
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public/build
+          publish_dir: ./public
           publish_branch: gh-pages
           commit_message: ${{ github.event.head_commit.message }}
