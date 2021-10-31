@@ -2,12 +2,16 @@
     import Profile from "./Profile.svelte";
     import Projects from "./Projects.svelte";
     import Skills from "./Skills/index.svelte";
+    import Experiences from "./Experiences.svelte";
+    import Educations from "./Educations.svelte";
 
     export let me;
 </script>
 
 <main>
     <Profile profile={me.profile} />
+    <Experiences experiences={me.experiences} />
+    <Educations educations={me.educations} />
     <Projects projects={me.projects} />
     <Skills skills={me.skills} />
 </main>
