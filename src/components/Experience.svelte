@@ -8,6 +8,7 @@
     {#each experiences as experience}
         <div class="experience">
             <h3 class="title">
+                <img src={experience.icon} alt="" />
                 <a href={experience.organization.link} target="_blank">{experience.organization.name}</a>, {experience.title}
             </h3>
             <p class="date">
@@ -65,6 +66,12 @@
 
       @media (max-width: $width-breakpoint) {
         margin-bottom: 0;
+      }
+
+      & > img {
+        height: 25px;
+        vertical-align: bottom;
+        margin-right: 0.2em;
       }
 
       & > a {

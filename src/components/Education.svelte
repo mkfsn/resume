@@ -8,7 +8,10 @@
     <h1>Education</h1>
     {#each educations as education}
         <div class="education">
-            <h3 class="name">{education.title}</h3>
+            <h3 class="name">
+                <img src={education.icon} alt="" />
+                {education.title}
+            </h3>
             <p class="date">
                 <i>{dateFormatter(education.date.from)} - {dateFormatter(education.date.to)}</i>
             </p>
@@ -48,6 +51,12 @@
       grid-area: name;
       font-weight: var(--font-bold);
       margin: 0;
+
+      & > img {
+        height: 25px;
+        vertical-align: bottom;
+        margin-right: 0.2em;
+      }
     }
 
     & > .date {
