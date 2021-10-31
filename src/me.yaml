@@ -1,0 +1,156 @@
+profile:
+  name: Peiming Wu
+  nickname: mkfsn
+  location: Taiwan
+  email: p408865(#)gmail.com
+  sns:
+    home: https://mkfsn.github.io
+    github: https://github.com/mkfsn
+    twitter: https://twitter.com/mkfsn
+    linkedin: https://linkedin.com/in/mkfsn
+  summary: >
+    Quick-learning software engineer with experience in computer science,
+    programming and computer networking for various projects.
+educations:
+  - title: 'Institute of Computer and Communication Engineering, National Cheng Kung University, Taiwan.'
+    icon: 'https://web.ncku.edu.tw/var/file/0/1000/msys_1000_556236_23708.ico'
+    date:
+      from: "2013-09-01T00:00:00Z"
+      to: "2016-09-01T00:00:00Z"
+    details: 'Master of Science'
+    color: 'yellow'
+  - title: 'Graduate School of Information Science and Technology, Osaka University, Japan.'
+    icon: 'https://www.osaka-u.ac.jp/favicon.ico'
+    date:
+      from: "2015-09-01T00:00:00Z"
+      to: "2016-08-01T00:00:00Z"
+    details: 'Exchange Student'
+    color: 'blue'
+  - title: 'Computer Science Engineering, National Sun Yat-Sen University, Taiwan.'
+    icon: 'https://www.nsysu.edu.tw//var/file/0/1000/msys_1000_5687921_59580.ico'
+    date:
+      from: "2009-09-01T00:00:00Z"
+      to: "2013-06-01T00:00:00Z"
+    details: 'Bachelor of Science'
+    color: 'yellow'
+experiences:
+  - title: 'Lead Developer'
+    organization: 'Glasnostic'
+    date:
+      from: "2018-11-01T00:00:00Z"
+      to: ""
+    icon: 'https://glasnostic.com/favicon.ico'
+    details:
+      - 'Responsible for the cloud project (i.e., developing, reviewing, testing and QA front-end/back-end web services, managing staging and production environments).'
+      - 'Experience in engineering leadership (i.e., team member management, sprint planning, shift rosters, performance appraisals).'
+      - 'Experience in testing micro-services (i.e., planing test cases for unit test and integration test, developing integration test for micro-services).'
+      - 'Experience with AWS (i.e., EC2, VPS).'
+      - 'Experience with Azure (i.e., ACS, AKS, OMS, Service Bus, CosmosDB).'
+      - 'Experience with several Kubernetes CNIs (e.g., flannel, calico, weave, canal).'
+    color: 'green'
+  - title: 'Software Engineer'
+    organization: 'Glasnostic'
+    date:
+      from: "2017-02-01T00:00:00Z"
+      to: "2018-11-01T00:00:00Z"
+    icon: 'https://glasnostic.com/favicon.ico'
+    details:
+      - 'Experience deploying and administering micro-services using Docker and Kubernetes.'
+      - 'Experience administering and deploying development CI/CD tools such as Git, Github, TravisCI.'
+      - 'Experience developing software router in Go and C with userspace packet processing frameworks (e.g., DPDK, Netmap).'
+      - 'Experience in back-end web development in Go with several technologies (e.g., MongoDB, InfluxDB, RESTful, Websocket, gRPC, LDAP).'
+      - 'Experience in front-end web development in TypeScript, HTML, SCSS using Anguler 1.5/2/4, D3.js, RxJS.'
+      - 'Experience with Linux operating system environments (e.g., Ubuntu, CentOS, Alpine).'
+    color: 'green'
+  - title: 'Network and System Administrator'
+    organization: 'NCKU EE'
+    date:
+      from: "2013-09-01T00:00:00Z"
+      to: "2015-06-01T00:00:00Z"
+    icon: 'https://www.ee.ncku.edu.tw/image/nckuee.ico'
+    details:
+      - 'Experience maintaining layer 2/3 switches and Linux operating systems.'
+      - 'Experience with Linux operating system environments (e.g., Ubuntu, CentOS).'
+      - 'Experience developing web-based network management system in PHP, HTML, JavaScript with LAMP.'
+    color: 'green'
+  - title: 'Network and System Administrator'
+    organization: 'NSYSU-CDPA (Campus Dorm-net Promotion Association)'
+    date:
+      from: "2010-09-01T00:00:00Z"
+      to: "2013-06-01T00:00:00Z"
+    icon: 'https://scontent.fkhh1-1.fna.fbcdn.net/v/t1.0-9/11232064_885586498187186_2626790383753317843_n.png?_nc_cat=106&_nc_sid=85a577&_nc_ohc=zEkI2EQ0HJMAX-i5tTL&_nc_ht=scontent.fkhh1-1.fna&oh=fbaaf10901ae081009d4901128c6ee8d&oe=5F546C90'
+    details:
+      - 'Experience with management of layer 2/3 switches (i.e., reconfiguration, replacement, upgrade).'
+      - 'Experience with RJ45 sockets replacement.'
+      - 'Experience in network monitoring using several tools and technologies (e.g., SNMP, MRTG, Netflow).'
+      - 'Experience maintaining web-based network management system.'
+      - 'Experience with Unix-like operating system environments (e.g., Ubuntu, Gentoo, FreeBSD, Solaris).'
+    color: 'green'
+projects:
+  - type: 'Master Thesis'
+    title: 'Design and Implementation of a Network Traffic Classification Caching Mechanism Based on Net-DPIS'
+    details:
+      - 'Improved performance of a host-based DPIS (Deep Packet Inspection System) which was developed as Linux kernel module.'
+skills:
+  - title: 'Frontend'
+    color: 'rgb(228, 182, 97)'
+    skills:
+      - { title: 'HTML5', percentage: '80%', label: '1' }
+      - { title: 'CSS3', percentage: '70%', label: '1' }
+      - { title: 'jQuery', percentage: '75%', label: '1' }
+      - { title: 'Bootstrap', percentage: '70%', label: '1' }
+      - { title: 'AngularJS', percentage: '72%', label: '2' }
+      - { title: 'Angular', percentage: '75%', label: '2' }
+      - { title: 'React', percentage: '20%', label: '2' }
+      - { title: 'Vue', percentage: '20%', label: '2' }
+  - title: 'Programming Language'
+    color: 'rgb(107, 153, 208)'
+    skills:
+      - { title: 'Go', percentage: '90%', label: '1' }
+      - { title: 'C', percentage: '90%', label: '1' }
+      - { title: 'C++', percentage: '85%', label: '1' }
+      - { title: 'Python', percentage: '65%', label: '2' }
+      - { title: 'PHP', percentage: '60%', label: '2' }
+      - { title: 'TypeScript', percentage: '75%', label: '2' }
+      - { title: 'Ruby', percentage: '35%', label: '3' }
+      - { title: 'NodeJS', percentage: '35%', label: '3' }
+      - { title: 'Rust', percentage: '15%', label: '3' }
+      - { title: 'Java', percentage: '20%', label: '3' }
+  - title: 'Backend & Database'
+    color: 'rgb(122, 193, 149)'
+    skills:
+      - { title: 'REST API', percentage: '75%', label: '1' }
+      - { title: 'Protobuf', percentage: '70%', label: '1' }
+      - { title: 'MySQL', percentage: '70%', label: '2' }
+      - { title: 'MongoDB', percentage: '65%', label: '2' }
+      - { title: 'InfluxDB', percentage: '65%', label: '2' }
+      - { title: 'Flask', percentage: '70%', label: '3' }
+      - { title: 'GIN', percentage: '75%', label: '3' }
+      - { title: 'Codeigniter', percentage: '70%', label: '3' }
+  - title: 'DevOps'
+    color: 'rgb(222, 132, 130)'
+    skills:
+      - { title: 'Docker', percentage: '85%', label: '1' }
+      - { title: 'Kubernetes', percentage: '85%', label: '1' }
+      - { title: 'AWS', percentage: '30%', label: '2' }
+      - { title: 'Azure', percentage: '65%', label: '2' }
+      - { title: 'TravisCI', percentage: '70%', label: '3' }
+      - { title: 'Github Actions', percentage: '60%', label: '3' }
+  - title: 'Networking & Security'
+    color: 'rgb(143, 133, 230)'
+    skills:
+      - { title: 'OpenFlow', percentage: '65%', label: '1' }
+      - { title: 'OpenStack', percentage: '55%', label: '1' }
+      - { title: 'Netfilter', percentage: '70%', label: '2' }
+      - { title: 'DPDK', percentage: '60%', label: '2' }
+      - { title: 'eBPF', percentage: '40%', label: '2' }
+      - { title: 'XDP', percentage: '40%', label: '2' }
+      - { title: 'Netmap', percentage: '50%', label: '2' }
+      - { title: 'Certified Ethical Hacker', percentage: '100%', label: '3' }
+  - title: 'Language'
+    color: 'rgb(144, 200, 234)'
+    skills:
+      - { title: '🇹🇼 Chinese', percentage: '95%', label: '1' }
+      - { title: '🇹🇼 Taiwanese', percentage: '95%', label: '1' }
+      - { title: '🇯🇵 Japanese', percentage: '70%', label: '2' }
+      - { title: '🇺🇸 English', percentage: '70%', label: '3' }

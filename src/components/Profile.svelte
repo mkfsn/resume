@@ -3,28 +3,29 @@
     import Fa from 'svelte-fa';
     import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
+    export let profile;
 </script>
 
 <header class="profile">
     <div class="container">
         <h1 class="name">
-            <span>Peiming Wu</span>
-            <span class="aka">(aka mkfsn)</span>
+            <span>{profile.name}</span>
+            {#if profile.nickname}
+                <span class="aka">(aka {profile.nickname})</span>
+            {/if}
         </h1>
-        <h4 class="address">
-        </h4>
         <h4 class="sns">
-            <SocialMediaLinks />
+            <SocialMediaLinks sns={profile.sns} />
             <span class="location">
-                <Fa icon={faMapMarkerAlt} size="lg" color="rgb(244, 111, 100)" /> Taiwan
+                <Fa icon={faMapMarkerAlt} size="lg" color="rgb(244, 111, 100)" /> {profile.location}
             </span>
             &nbsp;
             <span class="email">
-                <Fa icon={faEnvelope} size="lg" /> p408865(#)gmail.com
+                <Fa icon={faEnvelope} size="lg" /> {profile.email}
             </span>
         </h4>
         <hr/>
-        <p>Quick-learning software engineer with experience in computer science, programming and computer networking for various projects.</p>
+        <p>{profile.summary}</p>
     </div>
 </header>
 

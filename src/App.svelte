@@ -1,11 +1,10 @@
 <script lang="ts">
 	import Profile from "./components/Profile.svelte";
-	// const urlParams = new URLSearchParams(window.location.search);
-	// const wantPrintable = urlParams.get('theme') === 'printable'
+    import me from './me.yaml';
 </script>
 
 <main>
-    <Profile/>
+    <Profile profile={me.profile}/>
 </main>
 
 <style lang="scss">

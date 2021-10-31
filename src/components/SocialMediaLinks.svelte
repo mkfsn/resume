@@ -4,13 +4,7 @@
     import { faHome } from '@fortawesome/free-solid-svg-icons';
     import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-    // TODO: load from yaml
-    let sns = {
-        home: 'https://mkfsn.github.io/',
-        github: 'https://github.com/mkfsn',
-        twitter: 'https://twitter.com/mkfsn',
-        linkedin: 'https://linkedin.com/in/mkfsn',
-    }
+    export let sns;
 </script>
 
 <IconLink link={sns.home}>
