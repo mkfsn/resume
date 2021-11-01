@@ -109,12 +109,16 @@
       display: flex;
       align-items: center;
       margin-bottom: 9px;
+      flex-wrap: wrap;
+      row-gap: .2em;
     }
 
     .location {
-      margin-left: .1em;
+      margin-left: .2em;
     }
 
-    .email {}
+    .email {
+      margin-left: .2em
+    }
   }
 </style>

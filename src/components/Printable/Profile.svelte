@@ -60,7 +60,7 @@
         display: inline-block;
       }
       .aka {
-        font-size: .8em;
+        font-size: 0.7em;
         color: #595959;
       }
     }
@@ -69,9 +69,15 @@
       display: flex;
       align-items: center;
       margin-bottom: 9px;
+      flex-wrap: wrap;
+      row-gap: .2em;
     }
 
     .location {
+      margin-left: .2em;
+    }
+
+    .email {
       margin-left: .2em;
     }
   }
