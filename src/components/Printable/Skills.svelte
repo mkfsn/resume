@@ -47,7 +47,7 @@
     .skill-set {
       $width-breakpoint: 500px;
       flex: 0 0 50%;
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
 
       @media (max-width: $width-breakpoint) {
         flex: 0 0 100%;
