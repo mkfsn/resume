@@ -21,6 +21,12 @@
 </section>
 
 <style lang="scss">
+  @media print {
+    #education {
+      page-break-before: always;
+    }
+  }
+
   .education-container {
     margin: 0 .5em;
     padding-bottom: 1em;
