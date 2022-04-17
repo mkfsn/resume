@@ -10,7 +10,7 @@ profile:
     linkedin: https://linkedin.com/in/mkfsn
   summary: >
     Quick-learning software engineer with experience in computer science,
-    programming and computer networking for various projects.
+    programming and computer networking for various projects. I am confident with
 educations:
   - title: Institute of Computer and Communication Engineering, National Cheng Kung University, Taiwan.
     icon: https://web.ncku.edu.tw/var/file/0/1000/msys_1000_556236_23708.ico
@@ -34,18 +34,46 @@ educations:
     details: Bachelor of Science
     color: yellow
 experiences:
+  - title: Backend Chapter Leader
+    organization:
+      name: Zeals
+      link: https://zeals.co.jp/en/
+    date:
+      from: "2021-10-01T00:00:00Z"
+    details:
+      - Lead backend team with total 7 members, responsible for helping members setting their goals, enforcing good practices and policy among the team, conducting 1-on-1 for member caring and performance reviewing.
+      - 'Lead development of backend service that is required for providing custom defined labels and segments to search endusers with high-performance (Tech: protobuf, Dgraph, gRPC, K8s)'
+      - 'Lead development of initial conversation project that extends the functionality of legacy system to let clients be able to perform A/B testing with different scenarios (Tech: python, rails)'
+    icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
+    color: green
+  - title: Microservice Team Lead
+    organization:
+      name: Zeals
+      link: https://zeals.co.jp/en/
+    date:
+      from: "2021-04-13T00:00:00Z"
+      to: "2021-09-30T00:00:00Z"
+    details:
+      - Lead backend team with total 3 members, responsible for mentoring, caring.
+      - 'Lead design and development of backend service that is required for providing a high-performance searching feature based on user-provided attributes (Tech: protobuf, Dgraph, gRPC, K8s)'
+    icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
+    color: green
   - title: Go Engineer
     organization:
       name: Zeals
       link: https://zeals.co.jp/en/
     date:
       from: "2020-12-15T00:00:00Z"
+      to: "2020-04-12T00:00:00Z"
     details:
-      - Experience in web back-end development in Go with several technologies (e.g., MySQL, gRPC, DGraph).
+      - 'Revamped the delivery system from Python to Go (Tech: GCP PubSub, gRPC, Go, K8s)'
+      - 'Filter View Improvement Project: Improved performance of user-search API with custom defined filters written in Go'
+      - Experience in web back-end development in Go with several technologies (e.g., MySQL, gRPC).
       - Experience with GCP (i.e., GKE, Cloud Logging, Cloud Trace, PubSub, Cloud SQL, Secret Manager)
-      - Experience in infrastructure tools (e.g., ArgoCD, helm, pulumi)
+      - Experience in infrastructure tools (e.g., ArgoCD, helm, pulumi, kustomize)
       - Experience with monitoring tools (e.g. Datadog)
       - Experience with Atlassian products (i.e., Jira, Confluence, Trello)
+      - Experience in dealing with incident and the investigations
     icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
     color: green
   - title: Lead Developer
@@ -59,7 +87,7 @@ experiences:
     details:
       - Responsible for the cloud project (i.e., developing, reviewing, testing and QA front-end/back-end web services, managing staging and production environments).
       - Experience in engineering leadership (i.e., team member management, sprint planning, shift rosters, performance appraisals).
-      - Experience in testing micro-services (i.e., planing test cases for unit test and integration test, developing integration test for micro-services).
+      - Experience in testing microservices (i.e., planing test cases for unit test and integration test, developing integration test for micro-services).
       - Experience with AWS (i.e., EC2, VPS).
       - Experience with Azure (i.e., ACS, AKS, OMS, Service Bus, CosmosDB).
       - Experience with several Kubernetes CNIs (e.g., flannel, calico, weave, canal).
