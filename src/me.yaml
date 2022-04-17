@@ -10,7 +10,7 @@ profile:
     linkedin: https://linkedin.com/in/mkfsn
   summary: >
     Quick-learning software engineer with experience in computer science,
-    programming and computer networking for various projects. I am confident with
+    programming and computer networking for various projects.
 educations:
   - title: Institute of Computer and Communication Engineering, National Cheng Kung University, Taiwan.
     icon: https://web.ncku.edu.tw/var/file/0/1000/msys_1000_556236_23708.ico
@@ -41,9 +41,10 @@ experiences:
     date:
       from: "2021-10-01T00:00:00Z"
     details:
-      - Lead backend team with total 7 members, responsible for helping members setting their goals, enforcing good practices and policy among the team, conducting 1-on-1 for member caring and performance reviewing.
-      - 'Lead development of backend service that is required for providing custom defined labels and segments to search endusers with high-performance (Tech: protobuf, Dgraph, gRPC, K8s)'
-      - 'Lead development of initial conversation project that extends the functionality of legacy system to let clients be able to perform A/B testing with different scenarios (Tech: python, rails)'
+      - Led backend team with a total of 7 members, responsible for helping members set their goals, enforcing good practices and policy among the team, conducting 1-on-1 for member caring and performance reviewing.
+      - 'Led development of backend service that is required for providing custom defined labels and segments to search end-users with high-performance (Tech: Protobuf, Dgraph, gRPC, K8s)'
+      - 'Initial Conversation Project: Led the development of extending the functionality of the legacy system to let clients be able to perform A/B testing with different scenarios (Tech: Python, Rails, Go, MySQL, Protobuf, K8s)'
+      - Got 1 MVP which is voted by every member every month
     icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
     color: green
   - title: Microservice Team Lead
@@ -52,10 +53,11 @@ experiences:
       link: https://zeals.co.jp/en/
     date:
       from: "2021-04-13T00:00:00Z"
-      to: "2021-09-30T00:00:00Z"
+      to: "2021-10-01T00:00:00Z"
     details:
-      - Lead backend team with total 3 members, responsible for mentoring, caring.
-      - 'Lead design and development of backend service that is required for providing a high-performance searching feature based on user-provided attributes (Tech: protobuf, Dgraph, gRPC, K8s)'
+      - Led backend team with a total of 3 members, responsible for mentoring, and caring.
+      - 'Led design and development of backend service that is required for providing a high-performance searching feature based on user-provided attributes (Tech: Protobuf, Dgraph, gRPC, K8s)'
+      - Got 1 MVP which is voted by every member every month
     icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
     color: green
   - title: Go Engineer
@@ -68,7 +70,7 @@ experiences:
     details:
       - 'Revamped the delivery system from Python to Go (Tech: GCP PubSub, gRPC, Go, K8s)'
       - 'Filter View Improvement Project: Improved performance of user-search API with custom defined filters written in Go'
-      - Experience in web back-end development in Go with several technologies (e.g., MySQL, gRPC).
+      - Experience in web backend development in Go with several technologies (e.g., MySQL, gRPC).
       - Experience with GCP (i.e., GKE, Cloud Logging, Cloud Trace, PubSub, Cloud SQL, Secret Manager)
       - Experience in infrastructure tools (e.g., ArgoCD, helm, pulumi, kustomize)
       - Experience with monitoring tools (e.g. Datadog)
