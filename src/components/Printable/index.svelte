@@ -4,6 +4,7 @@
     import Education from "./Education.svelte";
     import Projects from "./Projects.svelte";
     import Skills from "./Skills.svelte";
+    import Certificates from "./Certificates.svelte";
 
     export let me;
 </script>
@@ -13,6 +14,7 @@
     <Experience experiences={me.experiences} />
     <Education educations={me.educations} />
     <Projects projects={me.projects} />
+    <Certificates certificates={me.certificates} />
     <Skills skills={me.skills} />
 </main>
 
