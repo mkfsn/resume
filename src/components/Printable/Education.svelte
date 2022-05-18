@@ -1,11 +1,17 @@
 <script lang="ts">
+    import { faGraduationCap  } from '@fortawesome/free-solid-svg-icons'
+    import Fa from 'svelte-fa';
+
     import {dateFormatter} from "../../utils/formatter";
 
     export let educations;
 </script>
 
 <section class="education-container" id="education">
-    <h1>Education</h1>
+    <h1>
+        <Fa icon={faGraduationCap} />
+        Education
+    </h1>
     {#each educations as education}
         <div class="education">
             <h3 class="name">
@@ -22,7 +28,7 @@
 
 <style lang="scss">
   .education-container {
-    margin: 0 .5em;
+    margin: 0;
     padding-bottom: 1em;
   }
 

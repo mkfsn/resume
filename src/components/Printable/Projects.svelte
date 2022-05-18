@@ -1,9 +1,15 @@
 <script type="ts">
+    import { faEdit } from '@fortawesome/free-solid-svg-icons'
+    import Fa from 'svelte-fa';
+
     export let projects;
 </script>
 
 <section class="projects" id="projects">
-    <h1>Projects</h1>
+    <h1>
+        <Fa icon={faEdit} />
+        Projects
+    </h1>
 
     {#each projects as project}
         <div class="project">
@@ -22,7 +28,7 @@
 
 <style lang="scss">
   .projects {
-    margin: 0 .5em;
+    margin: 0;
     padding-bottom: 1em;
     page-break-inside: avoid;
   }

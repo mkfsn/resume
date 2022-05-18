@@ -1,5 +1,5 @@
 <script type="ts">
-    import { faExternalLinkAlt  } from '@fortawesome/free-solid-svg-icons'
+    import { faExternalLinkAlt, faCertificate  } from '@fortawesome/free-solid-svg-icons'
     import Fa from 'svelte-fa';
 
     export let certificates;
@@ -36,55 +36,68 @@
 </script>
 
 <section class="certificates">
-    <h1>Certificates</h1>
+    <h1>
+        <Fa icon={faCertificate} />
+        Certificates
+    </h1>
     {#each sort_by_issued_at(certificates) as certificate}
         <div class="certificate">
-            <div class="icon">
-                <a target="_blank" href={certificate.organization.url}>
-                    <img width="48" height="48" src={certificate.organization.icon} alt="" />
-                </a>
-            </div>
-            <div class="info">
-                <h3 class="name">
+            <h3 class="name">
+                {#if certificate.url}
+                    <a href={certificate.url} target="_blank">
+                        {certificate.title}
+                        <Fa class="icon" icon={faExternalLinkAlt} size="xs" />
+                    </a>
+                {:else}
                     {certificate.title}
-                    {#if certificate.url}
-                        <a href={certificate.url} target="_blank">
-                            <Fa icon={faExternalLinkAlt} size="xs" />
-                        </a>
-                    {/if}
-                </h3>
-                <h4 class="degree">{certificate.organization.name}</h4>
-                <p class="date">{issued_at(certificate.issue_date)} · {expired_at(certificate.expiration_date)}</p>
-            </div>
+                {/if}
+            </h3>
+            <h4 class="degree">
+                <a target="_blank" href={certificate.organization.url}>
+                    {certificate.organization.name}
+                    <Fa class="icon" icon={faExternalLinkAlt} size="xs" />
+                </a>
+            </h4>
+            <p class="date">{issued_at(certificate.issue_date)} · {expired_at(certificate.expiration_date)}</p>
         </div>
     {/each}
 </section>
 
 <style lang="scss">
   .certificates {
-    margin: 0 .5em;
+    margin: 0;
     padding-bottom: 1em;
 
+    h1 {
+      font-size: 1.5em;
+      color: rgb(81, 123, 181);
+    }
+
     .certificate {
-      display: flex;
       margin-top: 1em;
 
-      .icon {
-        margin-right: .5em;
+      a {
+        text-decoration: none !important;
+
+        &:visited, &:active {
+          color: black;
+        }
       }
 
-      .info {
-        .name {
-          margin: 0;
-        }
+      :global(.icon) {
+        vertical-align: 0 !important;
+      }
 
-        .degree {
-          margin: 0;
-        }
+      .name {
+        margin: 0;
+      }
 
-        .date {
-          margin-top: .5em;
-        }
+      .degree {
+        margin: 0;
+      }
+
+      .date {
+        margin-top: .5em;
       }
     }
   }

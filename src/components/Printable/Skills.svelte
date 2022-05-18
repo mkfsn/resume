@@ -1,4 +1,7 @@
 <script type="ts">
+    import { faAtom } from '@fortawesome/free-solid-svg-icons'
+    import Fa from 'svelte-fa';
+
     export let skills;
 
     let skillSets = skills.map(group => {
@@ -18,7 +21,10 @@
 </script>
 
 <section class="skills">
-    <h1>Skills</h1>
+    <h1>
+        <Fa icon={faAtom} />
+        Skills
+    </h1>
     <div class="set-wrapper">
         {#each skillSets as skillSet}
             <div class="skill-set">
@@ -35,8 +41,13 @@
 
 <style lang="scss">
   .skills {
-    margin: 0 .5em;
+    margin: 0;
     padding-bottom: 1em;
+
+    h1 {
+      font-size: 1.5em;
+      color: rgb(81, 123, 181);
+    }
 
     .set-wrapper {
       margin-top: 1em;
@@ -46,7 +57,7 @@
 
     .skill-set {
       $width-breakpoint: 500px;
-      flex: 0 0 50%;
+      flex: 0 0 100%;
       margin-bottom: 0.9rem;
 
       @media (max-width: $width-breakpoint) {

@@ -6,7 +6,7 @@
     export let profile;
 </script>
 
-<header class="profile">
+<div class="profile">
     <div class="container">
         <h1 class="name">
             <span>{profile.name}</span>
@@ -24,24 +24,41 @@
                 <Fa icon={faEnvelope} size="lg" /> {profile.email}
             </span>
         </h4>
-        <hr/>
         <p>{profile.summary}</p>
     </div>
-</header>
+</div>
 
 <style lang="scss">
   @import '../../../styles/breakpoints';
 
   .profile {
-    background-color: white;
+    background-color: rgb(235, 183, 143);
     align-content: center;
     display: flex;
     flex-direction: column;
     flex: 1 1;
     border-width: 0;
-    padding: 0;
+    padding: 1.5em .5em 1em;
     height: auto;
-    margin: 0 .5em;
+    margin: 0 0 .5em;
+
+    @mixin margin-breakpoint($size) {
+      $side: calc((100vw - #{$size})/2);
+      padding-left: $side;
+      padding-right: $side;
+    }
+
+    @each $size in $sm, $md, $lg, $xl {
+      @media (min-width: $size) {
+        @include margin-breakpoint($size);
+      }
+    }
+
+    @media print {
+      padding-top: 1cm;
+      padding-left: 1cm;
+      padding-right: 1cm;
+    }
 
     & > .container {
       max-width: 1200px;

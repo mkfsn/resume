@@ -1,10 +1,16 @@
 <script lang="ts">
+    import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
+    import Fa from 'svelte-fa';
+
     import {dateFormatter} from "../../utils/formatter";
 
     export let experiences;
 </script>
 <section class="experiences" id="experiences">
-    <h1>Experience</h1>
+    <h1>
+        <Fa icon={faBriefcase} />
+        Experience
+    </h1>
     {#each experiences as experience}
         <div class="experience">
             <h3 class="title">
@@ -25,7 +31,7 @@
 
 <style lang="scss">
   .experiences {
-    margin: 0 .5em;
+    margin: 0;
     padding-bottom: 1em;
   }
 
