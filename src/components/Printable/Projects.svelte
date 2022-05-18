@@ -6,10 +6,12 @@
 </script>
 
 <section class="projects" id="projects">
+    {#if projects.length > 0}
     <h1>
         <Fa icon={faEdit} />
         Projects
     </h1>
+    {/if}
 
     {#each projects as project}
         <div class="project">
