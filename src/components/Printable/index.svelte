@@ -16,11 +16,11 @@
     <section class="sidebar">
         <Skills skills={me.skills} />
         <Certificates certificates={me.certificates} />
+        <Education educations={me.educations} />
     </section>
     <main class="main">
         <Experience experiences={me.experiences} />
         <Projects projects={me.projects} />
-        <Education educations={me.educations} />
     </main>
 </div>
 
