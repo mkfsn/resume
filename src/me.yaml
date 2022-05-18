@@ -12,26 +12,26 @@ profile:
     Quick-learning software engineer with experience in computer science,
     programming and computer networking for various projects.
 educations:
-  - title: Institute of Computer and Communication Engineering, National Cheng Kung University, Taiwan.
+  - title: National Cheng Kung University, Taiwan.
     icon: https://web.ncku.edu.tw/var/file/0/1000/msys_1000_556236_23708.ico
     date:
       from: "2013-09-01T00:00:00Z"
       to: "2016-09-01T00:00:00Z"
-    details: Master of Science
+    details: Master of Computer Science
     color: yellow
-  - title: Graduate School of Information Science and Technology, Osaka University, Japan.
-    icon: https://www.osaka-u.ac.jp/favicon.ico
-    date:
-      from: "2015-09-01T00:00:00Z"
-      to: "2016-08-01T00:00:00Z"
-    details: Exchange Student
-    color: blue
-  - title: Computer Science Engineering, National Sun Yat-Sen University, Taiwan.
+#  - title: Osaka University, Japan.
+#    icon: https://www.osaka-u.ac.jp/favicon.ico
+#    date:
+#      from: "2015-09-01T00:00:00Z"
+#      to: "2016-08-01T00:00:00Z"
+#    details: Exchange Student
+#    color: blue
+  - title: National Sun Yat-Sen University, Taiwan.
     icon: https://www.nsysu.edu.tw//var/file/0/1000/msys_1000_5687921_59580.ico
     date:
       from: "2009-09-01T00:00:00Z"
       to: "2013-06-01T00:00:00Z"
-    details: Bachelor of Science
+    details: Bachelor of Computer Science
     color: yellow
 experiences:
   - title: Backend Chapter Leader
@@ -41,10 +41,10 @@ experiences:
     date:
       from: "2021-10-01T00:00:00Z"
     details:
-      - Led backend team with a total of 7 members, responsible for helping members set their goals, enforcing good practices and policy among the team, conducting 1-on-1 for member caring and performance reviewing.
-      - 'Led development of backend service that is required for providing custom defined labels and segments to search end-users with high-performance (Tech: Protobuf, Dgraph, gRPC, K8s)'
-      - 'Initial Conversation Project: Led the development of extending the functionality of the legacy system to let clients be able to perform A/B testing with different scenarios (Tech: Python, Rails, Go, MySQL, Protobuf, K8s)'
-      - Got 1 monthly MVP and 1 yearly MVP
+      - Led backend team with a total of 7 members
+      - 'User Dossier Project: Providing custom defined labels and segments to search end-users with high-performance'
+      - 'Initial Conversation Project: Enhanced functionality of the legacy system to for A/B testing with different scenarios'
+      - Got 1 yearly MVP
       - Experience with Atlassian products (i.e., Jira, Confluence, Trello)
     icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
     color: green
@@ -56,8 +56,8 @@ experiences:
       from: "2021-04-13T00:00:00Z"
       to: "2021-10-01T00:00:00Z"
     details:
-      - Led backend team with a total of 3 members, responsible for mentoring, and caring.
-      - 'Led design and development of backend service that is required for providing a high-performance searching feature based on user-provided attributes (Tech: Protobuf, Dgraph, gRPC, K8s)'
+      - Led backend team with a total of 3 members
+      - 'User Dossier Project: Providing a high-performance searching feature based on end-user-provided attributes'
       - Got 1 MVP which is voted by every member every month
     icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
     color: green
@@ -69,12 +69,10 @@ experiences:
       from: "2020-12-15T00:00:00Z"
       to: "2020-04-12T00:00:00Z"
     details:
-      - 'Revamped the delivery system from Python to Go (Tech: GCP PubSub, gRPC, Go, K8s)'
-      - 'Filter View Improvement Project: Improved performance of user-search API with custom defined filters written in Go'
-      - Experience in web backend development in Go with several technologies (e.g., MySQL, gRPC).
-      - Experience with GCP (i.e., GKE, Cloud Logging, Cloud Trace, PubSub, Cloud SQL, Secret Manager)
-      - Experience in infrastructure tools (e.g., ArgoCD, Helm, Pulumi, Kustomize)
-      - Experience with monitoring tools (e.g. Datadog)
+      - 'Revamped the delivery system from Python to Go'
+      - 'Filter View Improvement Project: Improved performance of user-search API with custom defined filters'
+      - Experience with GCP and infrastructure tools (ArgoCD, Helm, Pulumi, Kustomize, Datadog)
+      - Got 1 MVP which is voted by every member every month
     icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
     color: green
   - title: Lead Developer
@@ -86,11 +84,9 @@ experiences:
       to: "2020-12-11T00:00:00Z"
     icon: https://glasnostic.com/favicon.ico
     details:
-      - Responsible for the cloud project (i.e., developing, reviewing, testing and QA front-end/back-end web services, managing staging and production environments).
+      - 'Responsible for the cloud project with several microservices: the dashboard of the control plane'
       - Experience in engineering leadership (i.e., team member management, sprint planning, shift rosters, performance appraisals).
-      - Experience in testing microservices (i.e., planing test cases for unit test and integration test, developing integration test for micro-services).
-      - Experience with AWS (i.e., EC2, VPS).
-      - Experience with Azure (i.e., ACS, AKS, OMS, Service Bus, CosmosDB).
+      - Experience with AWS (i.e., EC2, VPS) and Azure (i.e., ACS, AKS, OMS, Service Bus, CosmosDB).
       - Experience with several Kubernetes CNIs (e.g., flannel, calico, weave, canal).
     color: green
   - title: Software Engineer
@@ -102,12 +98,10 @@ experiences:
       to: "2018-11-01T00:00:00Z"
     icon: https://glasnostic.com/favicon.ico
     details:
-      - Experience deploying and administering micro-services using Docker and Kubernetes.
-      - Experience administering and deploying development CI/CD tools such as Git, Github, TravisCI.
+      - Experience deploying and administering microservices using Docker and Kubernetes.
+      - Experience in CI/CD tools (e.g., Git, Github, TravisCI).
       - Experience developing software router in Go and C with userspace packet processing frameworks (e.g., DPDK, Netmap).
-      - Experience in back-end web development in Go with several technologies (e.g., MongoDB, InfluxDB, RESTful, Websocket, gRPC, LDAP).
-      - Experience in front-end web development in TypeScript, HTML, SCSS using Anguler 1.5/2/4, D3.js, RxJS.
-      - Experience with Linux operating system environments (e.g., Ubuntu, CentOS, Alpine).
+      - 'Experience in full-stack development (TechStack: Go, Angular, D3.js, RxJS, MongoDB, InfluxDB, Websocket, RESTful, gRPC, LDAP)'
     color: green
   - title: Network and System Administrator
     organization:
@@ -120,28 +114,27 @@ experiences:
     details:
       - Experience maintaining layer 2/3 switches and Linux operating systems.
       - Experience with Linux operating system environments (e.g., Ubuntu, CentOS).
-      - Experience developing web-based network management system in PHP, HTML, JavaScript with LAMP.
+      - Built a web-based network management system (PHP, JavaScript).
     color: green
-  - title: Network and System Administrator
+  - title: Network and System Administrator (Volunteer)
     organization:
-      name: NSYSU-CDPA (Campus Dorm-net Promotion Association)
+      name: NSYSU-CDPA
       link: https://cdpa.nsysu.edu.tw
     date:
       from: "2010-09-01T00:00:00Z"
       to: "2013-06-01T00:00:00Z"
     icon: https://scontent.fkhh1-1.fna.fbcdn.net/v/t1.0-9/11232064_885586498187186_2626790383753317843_n.png?_nc_cat=106&_nc_sid=85a577&_nc_ohc=zEkI2EQ0HJMAX-i5tTL&_nc_ht=scontent.fkhh1-1.fna&oh=fbaaf10901ae081009d4901128c6ee8d&oe=5F546C90
     details:
-      - Experience with management of layer 2/3 switches (i.e., reconfiguration, replacement, upgrade).
-      - Experience with RJ45 sockets replacement.
-      - Experience in network monitoring using several tools and technologies (e.g., SNMP, MRTG, Netflow).
-      - Experience maintaining web-based network management system.
-      - Experience with Unix-like operating system environments (e.g., Ubuntu, Gentoo, FreeBSD, Solaris).
+      - Maintained layer 2/3 switches (i.e., reconfiguration, replacement, upgrade).
+      - Experience in network monitoring (SNMP, MRTG, Netflow).
+      - Maintained web-based network management system.
+      - Experience with Unix-like O.S. (e.g., Ubuntu, Gentoo, FreeBSD, Solaris).
     color: green
-projects:
-  - type: Master Thesis
-    title: Design and Implementation of a Network Traffic Classification Caching Mechanism Based on Net-DPIS
-    details:
-      - Improved performance of a host-based DPIS (Deep Packet Inspection System) which was developed as Linux kernel module.
+projects: []
+#  - type: Master Thesis
+#    title: Design and Implementation of a Network Traffic Classification Caching Mechanism Based on Net-DPIS
+#    details:
+#      - Improved performance of a host-based DPIS (Deep Packet Inspection System) which was developed as Linux kernel module.
 skills:
   - title: Frontend
     color: 'rgb(228, 182, 97)'
@@ -209,13 +202,13 @@ skills:
       - { title: '🇯🇵 Japanese', percentage: '70%', label: '2' }
       - { title: '🇺🇸 English', percentage: '70%', label: '3' }
 certificates:
-  - title: Certified Ethical Hacker
-    organization:
-      name: EC-Council
-      url: https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/
-      icon: /assets/images/ec-council-icon.png
-    issue_date: "2015-08-07T00:00:00Z"
-    expiration_date: "2019-08-31T00:00:00Z"
+#  - title: Certified Ethical Hacker
+#    organization:
+#      name: EC-Council
+#      url: https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/
+#      icon: /assets/images/ec-council-icon.png
+#    issue_date: "2015-08-07T00:00:00Z"
+#    expiration_date: "2019-08-31T00:00:00Z"
   - title: Certified Kubernetes Administrator
     url: https://www.credly.com/badges/155c5159-24fa-4d9c-9f14-c8e8dbff4735?source=linked_in_profile
     organization:
