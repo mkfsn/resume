@@ -45,6 +45,7 @@ experiences:
       - 'Led development of backend service that is required for providing custom defined labels and segments to search end-users with high-performance (Tech: Protobuf, Dgraph, gRPC, K8s)'
       - 'Initial Conversation Project: Led the development of extending the functionality of the legacy system to let clients be able to perform A/B testing with different scenarios (Tech: Python, Rails, Go, MySQL, Protobuf, K8s)'
       - Got 1 monthly MVP and 1 yearly MVP
+      - Experience with Atlassian products (i.e., Jira, Confluence, Trello)
     icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
     color: green
   - title: Microservice Sub-team Leader
@@ -72,10 +73,8 @@ experiences:
       - 'Filter View Improvement Project: Improved performance of user-search API with custom defined filters written in Go'
       - Experience in web backend development in Go with several technologies (e.g., MySQL, gRPC).
       - Experience with GCP (i.e., GKE, Cloud Logging, Cloud Trace, PubSub, Cloud SQL, Secret Manager)
-      - Experience in infrastructure tools (e.g., ArgoCD, helm, pulumi, kustomize)
+      - Experience in infrastructure tools (e.g., ArgoCD, Helm, Pulumi, Kustomize)
       - Experience with monitoring tools (e.g. Datadog)
-      - Experience with Atlassian products (i.e., Jira, Confluence, Trello)
-      - Experience in dealing with incident and the investigations
     icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
     color: green
   - title: Lead Developer
