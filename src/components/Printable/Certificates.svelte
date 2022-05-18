@@ -1,26 +1,9 @@
 <script type="ts">
     import { faExternalLinkAlt, faCertificate  } from '@fortawesome/free-solid-svg-icons'
     import Fa from 'svelte-fa';
+    import {dateFormatter} from "../../utils/formatter";
 
     export let certificates;
-    let now = new Date();
-
-    const format_date = (d: Date): String => {
-        return (new Date(d)).toLocaleDateString();
-    }
-
-    const issued_at = (d: Date): String => {
-        return `Issued: ${format_date(d)}`
-    }
-
-    const expired_at = (_d: Date): String => {
-        const d = new Date(_d);
-        if (d >= now) {
-            return `Expires: ${format_date(d)}`
-        }
-
-        return `Expired: ${format_date(d)}`
-    }
 
     const sort_by_issued_at = (list: any[]): any[] => {
         list.sort((a, b) => {
@@ -60,8 +43,11 @@
                     </i>
                 </a>
             </h4>
-            <p class="date">{issued_at(certificate.issue_date)}</p>
-            <p class="date">{expired_at(certificate.expiration_date)}</p>
+            <p class="date">
+                <i>
+                    {dateFormatter(certificate.issue_date, false)} - {dateFormatter(certificate.expiration_date, false)}
+                </i>
+            </p>
         </div>
     {/each}
 </section>
