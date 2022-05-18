@@ -14,8 +14,10 @@
     </h1>
     {#each educations as education}
         <div class="education">
-            <h3 class="name">
+            <div class="icon">
                 <img src={education.icon} alt="" />
+            </div>
+            <h3 class="name">
                 {education.title}
             </h3>
             <p class="date">
@@ -36,16 +38,18 @@
     $width-breakpoint: 500px;
 
     display: grid;
-    grid-template-areas: "name   date"
-                         "degree degree";
+    grid-template-areas: "icon name"
+                         "icon date"
+                         "icon degree";
     grid-row-gap: .5em;
+    grid-column-gap: .2em;
     margin-top: 1.5em;
 
     @media (max-width: $width-breakpoint) {
       grid-row-gap: .25em;
       grid-template-areas: "name"
-                             "date"
-                             "degree";
+                           "date"
+                           "degree";
     }
 
     & > .degree {
@@ -53,24 +57,29 @@
       margin: 0;
     }
 
-    & > .name {
-      grid-area: name;
-      font-weight: var(--font-bold);
-      margin: 0;
+    & > .icon {
+      grid-area: icon;
 
       & > img {
-        height: 25px;
+        height: 16px;
         vertical-align: bottom;
         margin-right: 0.2em;
       }
     }
 
+    & > .name {
+      grid-area: name;
+      font-weight: var(--font-bold);
+      margin: 0;
+    }
+
     & > .date {
       grid-area: date;
-      justify-self: right;
+      justify-self: left;
       margin: 0;
       font-size: .9em;
-      line-height: 1.6em;
+      height: 1.8em;
+      line-height: 1.8em;
 
       @media (max-width: $width-breakpoint) {
         justify-self: flex-start;
