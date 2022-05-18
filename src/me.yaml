@@ -44,7 +44,7 @@ experiences:
       - Led backend team with a total of 7 members, responsible for helping members set their goals, enforcing good practices and policy among the team, conducting 1-on-1 for member caring and performance reviewing.
       - 'Led development of backend service that is required for providing custom defined labels and segments to search end-users with high-performance (Tech: Protobuf, Dgraph, gRPC, K8s)'
       - 'Initial Conversation Project: Led the development of extending the functionality of the legacy system to let clients be able to perform A/B testing with different scenarios (Tech: Python, Rails, Go, MySQL, Protobuf, K8s)'
-      - Got 1 MVP which is voted by every member every month
+      - Got 1 monthly MVP and 1 yearly MVP
     icon: https://zeals.co.jp/wp-content/uploads/2021/08/424dd979-icon_62x62.png
     color: green
   - title: Microservice Team Leader
