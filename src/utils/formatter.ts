@@ -1,11 +1,11 @@
-function dateFormatter(input) {
+function dateFormatter(input, current = true) {
     let date = newDate(input);
 
     const now = new Date();
     if (!isValidDate(date)) {
         date = now;
     }
-    if (now.getFullYear() === date.getFullYear() && now.getMonth() === date.getMonth()) {
+    if (current && now.getFullYear() === date.getFullYear() && now.getMonth() === date.getMonth()) {
         return 'Current';
     }
     const monthNames = [
@@ -13,8 +13,8 @@ function dateFormatter(input) {
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
     ];
     const month = monthNames[date.getMonth()];
-    const year = date.getFullYear().toString().substr(2);
-    return `${month}'${year}`;
+    const year = date.getFullYear().toString().substr(0);
+    return `${month} ${year}`;
 }
 
 function newDate(d): Date {
