@@ -4,6 +4,7 @@
 	--dark-gray: #6e6e6e;
 	--font-bold: 900;
 	--gap: .8rem;
+	--blue: rgb(81, 123, 181);
 	--icon-size: 24px;
 }
 
@@ -18,16 +19,18 @@ html, body {
 	box-sizing: border-box;
 	font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 13px;
+    /* https://stackoverflow.com/questions/3893986/css-media-print-issues-with-background-color */
+	-webkit-print-color-adjust: exact !important;
 }
 
 section {
 	display: flex;
 	flex-direction: column;
-	flex: 1 1;
 }
 
 section > h1 {
-	border-bottom: 1px var(--gray) solid;
+	color: var(--blue);
+	border-bottom: 1px var(--blue) solid;
 	padding-bottom: calc(var(--gap) * .5);
 	margin-bottom: 0;
 	margin-block-start: 0.68em;
@@ -37,7 +40,13 @@ p {
 	margin-bottom: .5rem;
 }
 
-@page{
+@page {
 	size: A4 portrait;
-	margin: 0.5cm;
+	margin-bottom: 1cm;
+}
+
+@media print {
+	body, html {
+		font-size: 8px;
+	}
 }
