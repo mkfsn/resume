@@ -110,7 +110,7 @@ experiences:
     date:
       from: "2013-09-01T00:00:00Z"
       to: "2015-06-01T00:00:00Z"
-    icon: https://www.ee.ncku.edu.tw/image/nckuee.ico
+    icon: /assets/images/ncku-ee.png
     details:
       - Experience maintaining layer 2/3 switches and Linux operating systems.
       - Experience with Linux operating system environments (e.g., Ubuntu, CentOS).
@@ -123,7 +123,7 @@ experiences:
     date:
       from: "2010-09-01T00:00:00Z"
       to: "2013-06-01T00:00:00Z"
-    icon: https://scontent.fkhh1-1.fna.fbcdn.net/v/t1.0-9/11232064_885586498187186_2626790383753317843_n.png?_nc_cat=106&_nc_sid=85a577&_nc_ohc=zEkI2EQ0HJMAX-i5tTL&_nc_ht=scontent.fkhh1-1.fna&oh=fbaaf10901ae081009d4901128c6ee8d&oe=5F546C90
+    icon: /assets/images/cdpa.jpeg
     details:
       - Maintained layer 2/3 switches (i.e., reconfiguration, replacement, upgrade).
       - Experience in network monitoring (SNMP, MRTG, Netflow).
