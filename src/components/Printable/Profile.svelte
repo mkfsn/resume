@@ -55,7 +55,6 @@
     }
 
     @media print {
-      padding-top: 1cm;
       padding-left: 1cm;
       padding-right: 1cm;
     }
