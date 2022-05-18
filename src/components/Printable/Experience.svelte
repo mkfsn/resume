@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
+    import { faBriefcase, faBuilding } from '@fortawesome/free-solid-svg-icons'
     import Fa from 'svelte-fa';
 
     import {dateFormatter} from "../../utils/formatter";
@@ -13,8 +13,14 @@
     </h1>
     {#each experiences as experience}
         <div class="experience">
+            <div class="icon">
+                {#if experience.icon}
+                    <img src={experience.icon} alt="" />
+                {:else}
+                    <Fa icon={faBuilding} />
+                {/if}
+            </div>
             <h3 class="title">
-                <img src={experience.icon} alt="" />
                 <a href={experience.organization.link} target="_blank">{experience.organization.name}</a>, {experience.title}
             </h3>
             <p class="date">
@@ -39,8 +45,9 @@
     $width-breakpoint: 500px;
 
     display: grid;
-    grid-template-areas: "title   date"
-                         "details details";
+    grid-template-columns: calc(25px + 2em) auto auto;
+    grid-template-areas: "icon title   date"
+                         "icon details details";
     grid-row-gap: .5em;
     margin-top: 1.5em;
 
@@ -64,6 +71,16 @@
       }
     }
 
+    & > .icon {
+      grid-area: icon;
+      justify-self: center;
+
+      & > img {
+        height: 25px;
+        vertical-align: bottom;
+      }
+    }
+
     & > .title {
       grid-area: title;
       font-weight: var(--font-bold);
@@ -74,11 +91,7 @@
         margin-bottom: 0;
       }
 
-      & > img {
-        height: 25px;
-        vertical-align: bottom;
-        margin-right: 0.2em;
-      }
+
 
       & > a {
         color: var(--black) !important;
