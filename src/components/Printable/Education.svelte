@@ -59,9 +59,10 @@
 
     & > .icon {
       grid-area: icon;
+      width: 1.5em;
 
       & > img {
-        height: 16px;
+        width: 100%;
         vertical-align: bottom;
         margin-right: 0.2em;
       }
