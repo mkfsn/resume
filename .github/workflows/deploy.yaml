@@ -11,12 +11,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup Svelte
-        uses: borales/actions-yarn@v2.3.0
+        uses: borales/actions-yarn@v3
         with:
           cmd: install # will run `yarn install` command'
 
       - name: Build
-        uses: borales/actions-yarn@v2.3.0
+        uses: borales/actions-yarn@v3
         with:
           cmd: build # will run `yarn build` command
 
