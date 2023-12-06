@@ -12,7 +12,6 @@
             <span>{profile.name}</span>
             <span class="aka">(aka {profile.nickname})</span>
         </h1>
-        <h4 class="address"></h4>
         <h4 class="sns">
             <SocialMediaLinks sns={profile.sns}/>
             <span class="location">
@@ -81,28 +80,6 @@
         font-size: 0.7em;
         color: #595959;
       }
-    }
-
-    .avatar {
-      display: none;
-      width: 128px;
-      position: absolute;
-      border-radius: 50%;
-      top: 1.5em;
-      right: 2em;
-
-      img {
-        width: 100%;
-        border-radius: 50%;
-        border: 2px solid #aaa;
-        box-shadow: 0 0 18px -8px;
-        // Prevent displaying black background on print when using box-shadow.
-        -webkit-print-color-adjust: exact;
-      }
-    }
-
-    .address {
-      margin: 0;
     }
 
     .sns {

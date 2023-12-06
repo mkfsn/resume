@@ -1,5 +1,5 @@
 <script type="ts">
-    import {IParsedDateRange, IDateRange} from './date.ts';
+    import type {IParsedDateRange, IDateRange} from './date.ts';
     import TimelineAxis from "./TimelineAxis.svelte";
     import TimelinePeriodTitle from "./TimelinePeriodTitle.svelte";
     import TimelinePeriodDetails from "./TimelinePeriodDetails.svelte";
@@ -8,11 +8,11 @@
     export let date: IDateRange;
     export let details: string[];
     export let icon: string;
-    export let organization: string;
+    // export let organization: string;
     export let title: string;
     export let afterChildren: any[];
-    export let beforeChildren: any[];
-    export let parsedDate: IParsedDateRange;
+    // export let beforeChildren: any[];
+    // export let parsedDate: IParsedDateRange;
 
     let hasAfterBlock = afterChildren && afterChildren[0] !== undefined;
 </script>
