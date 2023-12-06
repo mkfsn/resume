@@ -41,8 +41,9 @@
     grid-template-areas: "icon name"
                          "icon date"
                          "icon degree";
+    grid-template-columns: 1.5em auto;
     grid-row-gap: .5em;
-    grid-column-gap: .2em;
+    grid-column-gap: .5em;
     margin-top: 1.5em;
 
     @media (max-width: $width-breakpoint) {
@@ -59,7 +60,6 @@
 
     & > .icon {
       grid-area: icon;
-      width: 1.5em;
 
       & > img {
         width: 100%;

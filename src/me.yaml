@@ -19,13 +19,14 @@ educations:
       to: "2016-09-01T00:00:00Z"
     details: Master of Computer Science
     color: yellow
-#  - title: Osaka University, Japan.
-#    icon: https://www.osaka-u.ac.jp/favicon.ico
-#    date:
-#      from: "2015-09-01T00:00:00Z"
-#      to: "2016-08-01T00:00:00Z"
-#    details: Exchange Student
-#    color: blue
+  - title: Osaka University, Japan.
+    display: printable
+    icon: https://www.osaka-u.ac.jp/favicon.ico
+    date:
+      from: "2015-09-01T00:00:00Z"
+      to: "2016-08-01T00:00:00Z"
+    details: Exchange Student
+    color: blue
   - title: National Sun Yat-Sen University, Taiwan.
     icon: /assets/images/nsysu.png
     date:
@@ -34,12 +35,24 @@ educations:
     details: Bachelor of Computer Science
     color: yellow
 experiences:
+  - title: Software Engineer
+    organization:
+      name: LINE
+      link: https://linecorp.com/
+    date:
+      from: "2023-03-01T00:00:00Z"
+    details:
+      - Migrated applications to use the secure HBase cluster with zero downtime
+      - Migrated HBase table from non-secure cluster to secure cluster with zero downtime
+    icon: /assets/images/line.png
+    color: green
   - title: Backend Chapter Leader
     organization:
       name: Zeals
       link: https://zeals.co.jp/en/
     date:
       from: "2021-10-01T00:00:00Z"
+      to: "2023-01-31T00:00:00Z"
     details:
       - Led backend team with a total of 7 members
       - 'User Dossier Project: Providing custom defined labels and segments to search end-users with high-performance'
@@ -58,7 +71,7 @@ experiences:
     details:
       - Led backend team with a total of 3 members
       - 'User Dossier Project: Providing a high-performance searching feature based on end-user-provided attributes'
-      - Got 1 MVP which is voted by every member every month
+      - Got 1 monthly MVP
     icon: /assets/images/zeals.png
     color: green
   - title: Go Engineer
@@ -72,7 +85,7 @@ experiences:
       - 'Revamped the delivery system from Python to Go'
       - 'Filter View Improvement Project: Improved performance of user-search API with custom defined filters'
       - Experience with GCP and infrastructure tools (ArgoCD, Helm, Pulumi, Kustomize, Datadog)
-      - Got 1 MVP which is voted by every member every month
+      - Got 1 monthly MVP
     icon: /assets/images/zeals.png
     color: green
   - title: Lead Developer
@@ -157,10 +170,11 @@ skills:
       - { title: 'Python', percentage: '65%', label: '2' }
       - { title: 'PHP', percentage: '60%', label: '2' }
       - { title: 'TypeScript', percentage: '75%', label: '2' }
-      - { title: 'Ruby', percentage: '35%', label: '3' }
-      - { title: 'NodeJS', percentage: '35%', label: '3' }
-      - { title: 'Rust', percentage: '15%', label: '3' }
       - { title: 'Java', percentage: '20%', label: '3' }
+      - { title: 'Kotlin', percentage: '20%', label: '3' }
+      - { title: 'Ruby', percentage: '35%', label: '4' }
+      - { title: 'NodeJS', percentage: '35%', label: '4' }
+      - { title: 'Rust', percentage: '15%', label: '4' }
   - title: Backend & Database
     color: 'rgb(122, 193, 149)'
     skills:
@@ -202,13 +216,13 @@ skills:
       - { title: '🇯🇵 Japanese', percentage: '70%', label: '2' }
       - { title: '🇺🇸 English', percentage: '70%', label: '3' }
 certificates:
-#  - title: Certified Ethical Hacker
-#    organization:
-#      name: EC-Council
-#      url: https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/
-#      icon: /assets/images/ec-council-icon.png
-#    issue_date: "2015-08-07T00:00:00Z"
-#    expiration_date: "2019-08-31T00:00:00Z"
+  - title: Certified Ethical Hacker
+    organization:
+      name: EC-Council
+      url: https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/
+      icon: /assets/images/ec-council-icon.png
+    issue_date: "2015-08-07T00:00:00Z"
+    expiration_date: "2019-08-31T00:00:00Z"
   - title: Certified Kubernetes Administrator
     url: https://www.credly.com/badges/155c5159-24fa-4d9c-9f14-c8e8dbff4735?source=linked_in_profile
     organization:

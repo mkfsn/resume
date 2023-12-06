@@ -29,17 +29,20 @@
       position: relative;
         #{$top-or-bottom}: 0;
       left: 3.5em;
+      text-align: left;
     }
 
     & > .end {
       @include date-text(top);
       margin-top: -$gap;
+      width: 10rem;
     }
 
     & > .begin {
       @include date-text(bottom);
       margin-top: auto;
       margin-bottom: -$gap;
+      width: 10rem;
     }
 
     @mixin time-point {
